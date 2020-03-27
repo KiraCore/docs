@@ -1,6 +1,6 @@
 # Kira Protocol Licenses and Documentation
 
-Kira Protocol and improvements to Bonded/Nominated Proof of Stake consensus mechanism in the form of the Multi-Bonded Proof of Stake as well as other Kira Core inventions is released under the MIT license with exception for the Initial Delegator Offerings.
+Kira Protocol and improvements to Bonded/Nominated Proof of Stake consensus mechanism in the form of the Multi-Bonded Proof of Stake as well as other Kira Core inventions are released under the MIT license with exception for the Initial Delegator Offerings.
 
 Initial Delegator Offering is an invention and intellectual property of Kira Core JSC, released under the Affero General Public License, version 3 (AGPL). Modifying the Initial Delegator Offering (IDO) (for example, creating a new blockchain or off-chain offering software), reimplementations, use in other software, or otherwise create a new work based on any work related to Initial Delegator Offering materials licensed under the AGPL, your software will be automatically licensed under the AGPL and needs to be made available to everyone who is a recipient of your new or modified software or interacts with it remotely over a network. 
 
