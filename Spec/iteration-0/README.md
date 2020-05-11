@@ -1,0 +1,60 @@
+
+# Iteration 0
+
+The Iteration 0 or Proof of Concept (PoC) is a first evolutionary step of the Kira Protocol. The main goal of this iteration is to create minimum viable blockchain-application based service that end user can interact with. The subject of the PoC is a Decentralized Exchange (DEX), a blockchain application containing minimum set of instructions necessary to enable 2 or more users to trustlessly exchange their tokens.
+
+_NOTE: Kira Protocol is NOT a Decentralized Exchange, however DEX was chosen by us as the simplest DeFi system that can be used for the purpose of demonstrating protocol capabilities in the later iterations._
+
+## Roadmap
+
+The PoC consist of 3 milestones that must be completed with defined below capabilities. This iteration scope is also divided into **OPTIONAL** :new_moon: and **ESSENTIAL** :full_moon: tasks. Each task also contains a status, which is **PENDING** :x:, **ACTIVE** :pick: or **COMPLETED** :white_check_mark:. Each feature :zap: MUST have assigned [:bookmark:KIP] (Kira Improvement Proposal) tags to each of it's tasks and dedicated documentation page.
+
+_NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future iterations and are NOT a priority for delivery._
+
+1. :link: Blockchain Application 
+   * :zap: Order Books Management
+     * :x: :full_moon: [[:bookmark:KIP_1]](order-book.md#KIP_1) Create Order Book
+   * :zap: Orders Management
+     * :x: :full_moon: [[:bookmark:KIP_2]]() Place Order
+     * :x: :full_moon: [[:bookmark:KIP_3]]() Cancel Order
+   * :zap: Key Management
+     * :x: :new_moon: [[:bookmark:KIP_4]]() Signer Key Registration
+  
+2. :globe_with_meridians: REST Server / JSON RPC
+   * :zap: Queries 
+      * :x: :full_moon: [[:bookmark:KIP_5]](order-book.md#KIP_5) List Order Books
+      * :x: :full_moon: [[:bookmark:KIP_6]]() List Orders
+      * :x: :new_moon: [[:bookmark:KIP_7]]() List Signer Keys
+   * :zap: Security
+      * :x: :new_moon: [[:bookmark:KIP_8]]() Response Signing
+      * :x: :new_moon: [[:bookmark:KIP_9]]() Endpoints Whitelist
+  
+3. :eyes: Web User Interface (Static Page)
+   * :zap: Account Management
+      * :x: :full_moon: [[:bookmark:KIP_10]]() Token Balances (Preview)
+      * :x: :new_moon: [[:bookmark:KIP_11]]() Token Transfers (Withdraw)
+      * :x: :new_moon: [[:bookmark:KIP_12]]() Trusted Signatures (Whitelist)
+   * :x: Order Book Management
+      * :x: :full_moon: [[:bookmark:KIP_13]]() Select & Preview Order Books
+      * :x: :full_moon: [[:bookmark:KIP_14]]() Place & Cancel Orders
+   * :zap: Orders Management
+      * :x: :new_moon: [[:bookmark:KIP_15]]() List & Cancel Orders 
+   * :zap: Network Management
+      * :x: :new_moon: [[:bookmark:KIP_16]]() List Validator 
+      * :x: :new_moon: [[:bookmark:KIP_17]]() List Registered Signer Keys 
+   * :zap: Security
+      * :x: :new_moon: [[:bookmark:KIP_18]]() Signer Key Verification
+
+## Objective
+
+The main goal of iteration 0 is to crate a minimum viable DEX 
+
+
+
+
+
+
+
+
+
+
