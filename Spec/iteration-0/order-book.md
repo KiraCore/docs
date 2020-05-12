@@ -25,15 +25,16 @@ It MUST NOT be possible to create two order books with the same ID, however ther
 
 For the purpose of the PoC `curator` property will not be used as NO `update_order_book` transactions will be required in that particular milestone. Finally message structure should take into account future updates and possibility to query by any of the above properties.
 
-The construction of the ID should be designed in a way to enable query by prefix using curator address, base currency & quote currency in that specific order, all of the arbitrary length while maintaining the ID possibly short.
+The construction of the ID should be designed in a way to enable query by prefix using curator address, base currency & quote currency in that specific order, all of the arbitrary length while maintaining the ID possibly short. The ID should always be of fixed length (32 Bytes)
 
 Example (Pseudo-Code) Solution:
 ```
-ID == blake(curator).take(16).toHex() + blake(base).take(16).toHex() + blake(quote).take(16).toHex() + len(last_order_book_index).toHex()
+ID == blake(curator).take(8).toHex() + blake(base).take(8).toHex() + blake(quote).take(8).toHex() + len(last_order_book_index).toHex()
 ```
 
 _NOTE: This might not be the most optimal way to do create ID, and there is a possibility of collisions, but those should not be an issue as results from the prefix query can be further refined_ 
 
+When the order book is created an incremental only and unique `last_order_book_index` (8 Bytes) aka `index` should be assigned to it, in order to ensure that orders can reference order-book in the non expensive manner.
 
 ## KIP_5
 > List Order Books
