@@ -17,13 +17,17 @@ The `create_limit_order` transaction requires following properties
  * `price` - limit price
  * `expires` - UTC timestamp when the order will be cancelled
 
+_OPTIONAL: In the first iteration of the Kira PoC application limit orders can be ordered by gas paid and executed with a pseudo-random priority, that means, a fully deterministic  pseudo random function can be initialized with the seed equal to first `N` Bytes of the previous block hash. This strategy is a simplest front-running & gas-war prevention method, as it is not guaranteed your order will be processed first even if you pay more GaS._
 
-_OPTIONAL: In the first iteration of the Kira PoC application limit orders can be executed with a pseudo-random priority, that means, a fully deterministic  pseudo random function can be initialized with the seed equal to first `N` Bytes of the previous block hash. This strategy is a simplest front-running & gas-war prevention method, as it is not guaranteed your order will be processed first even if you pay more GaS._
+When orders are placed in the blockchain state they should be prefixed by the order book `index` (4 Bytes), `type` (4 Byte), `price` (8 Bytes) and end with a unique iterative `last_order_index` (4 Bytes). Order Id's should be of fixed length (20 Bytes). Note that only already matched orders should be placed in the state. This will enable us to quickly query subset of specific order by the prefix.
 
-When orders are placed in the blockchain state they should be prefixed by the order book `index` (8 Bytes), `type` (1 Byte), `price` (8 Bytes) and end with a unique iterative `last_order_index` (7 Bytes). Order Id's should be of fixed length (32 Bytes). Note that only already matched orders should be placed in the state
+_OPTIONAL: Order `index` has additional function, that is order prioritization when matching of old orders with new ones is taking place. This enables prioritization of the order execution even in the case where two orders are placed with the same price._
 
-To determine which orders match we need to first delete all expired orders and return assets to original holders. It would be ideal if all data can be loaded in to RAM memory during processing. As the second step we can query sell orders by prefix to match new buy orders and query buy orders to match new sell orders. 
+To determine which orders match we need to first delete all expired orders and unlock assets belonging to original holders. Furthermore if there are `cancel_order` transactions in current block their execution should be prioritized before any orders are matched. It would be ideal if all data can be loaded to RAM memory during processing. As the second step we can query sell orders by prefix to match new buy orders and query buy orders to match new sell orders.
 
+As the result of `create_limit_order` transaction `id` should be returned to the user, otherwise error response if order was not created.
 
 ## KIP_3
 > Cancel Order
+
+By using `cancel_order` it must be possible to cancel (remove from state) existing orders by using order `id`.

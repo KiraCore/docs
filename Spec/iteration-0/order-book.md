@@ -13,7 +13,7 @@ The order book creation must involve a custom fee (other than transaction fee), 
 _NOTE: Order book creation fee is necessary to prevent spam attacks_
 
 The `create_order_book` transaction requires following properties
-* `id` - globally unique order book identifier (BLAKE2b)
+* `index` - globally unique iterative index
 * [base](https://www.investopedia.com/terms/b/basecurrency.asp) - base currency
 * [quote](https://www.investopedia.com/terms/q/quotecurrency.asp) - quote currency
 * `mnemonic` (optional) - friendly nickname (or hash pointing to description), no longer than 64 characters
@@ -25,22 +25,29 @@ It MUST NOT be possible to create two order books with the same ID, however ther
 
 For the purpose of the PoC `curator` property will not be used as NO `update_order_book` transactions will be required in that particular milestone. Finally message structure should take into account future updates and possibility to query by any of the above properties.
 
-The construction of the ID should be designed in a way to enable query by prefix using curator address, base currency & quote currency in that specific order, all of the arbitrary length while maintaining the ID possibly short. The ID should always be of fixed length (32 Bytes)
+The construction of the ID should be designed in a way to enable query by prefix using curator address, base currency & quote currency in that specific order, all of the arbitrary length while maintaining the ID possibly short. The ID should always be of fixed length (16 Bytes)
+
+When the order book is created an incremental only and unique `last_order_book_index` (4 Bytes) aka `index` should be assigned to it, in order to ensure that orders can reference order-book in the non expensive manner (query by suffix).
 
 Example (Pseudo-Code) Solution:
 ```
-ID == blake(curator).take(8).toHex() + blake(base).take(8).toHex() + blake(quote).take(8).toHex() + len(last_order_book_index).toHex()
+ID == 
+(blake(curator).take(4).toHex() << 12) + 
+(blake(base).take(4).toHex() << 8) + 
+(blake(quote).take(4).toHex() << 4) + 
+len(last_order_book_index).toHex()
 ```
 
-_NOTE: This might not be the most optimal way to do create ID, and there is a possibility of collisions, but those should not be an issue as results from the prefix query can be further refined_ 
+As the result of `create_order_book` transaction `id` should be returned to the user, otherwise error response if `index` already exists.
 
-When the order book is created an incremental only and unique `last_order_book_index` (8 Bytes) aka `index` should be assigned to it, in order to ensure that orders can reference order-book in the non expensive manner.
+_NOTE: This might not be the most optimal way to create ID, and there is a possibility of currency name or creator address collisions, but those should not be an issue as results from the prefix query can be further refined_ 
 
 ## KIP_5
 > List Order Books
 
-By using `query_order_book` it must be possible to quickly query order book by:
+By using `query_order_books` it must be possible to quickly query order books by:
 * ID
+* Index
 * Quote Currency
 * Base Currency
 * Trading Pair (Base & Quote) - in specific order
@@ -54,7 +61,7 @@ Example:
 ```
 [
     {
-        "id":"c8cf655f24a0945d3b678041fa227b4f6b60a7361713f5da380a3c6f3db05dfb",
+        "id":"c8f655f24a0a7361713f5da200000001",
         "base": "ukex",
         "quote": "transfer/ibc_token_id/uatom"
         "curator": "kira15v50ymp6n5dn73erkqtmq0u8adpl8d3ujv2e74",

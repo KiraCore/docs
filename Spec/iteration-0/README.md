@@ -15,35 +15,35 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
    * :zap: Order Books Management
      * :x: :full_moon: [[:bookmark:KIP_1]](order-book.md#KIP_1) Create Order Book
    * :zap: Orders Management
-     * :x: :full_moon: [[:bookmark:KIP_2]]() Place Order
-     * :x: :full_moon: [[:bookmark:KIP_3]]() Cancel Order
+     * :x: :full_moon: [[:bookmark:KIP_2]](order-matching.md#KIP_2) Place Order
+     * :x: :full_moon: [[:bookmark:KIP_3]](order-matching.md#KIP_3) Cancel Order
    * :zap: Key Management
-     * :x: :new_moon: [[:bookmark:KIP_4]]() Signer Key Registration
+     * :x: :new_moon: [:bookmark:KIP_4] Signer Key Registration
   
 2. :globe_with_meridians: REST Server / JSON RPC
    * :zap: Queries 
       * :x: :full_moon: [[:bookmark:KIP_5]](order-book.md#KIP_5) List Order Books
-      * :x: :full_moon: [[:bookmark:KIP_6]]() List Orders
-      * :x: :new_moon: [[:bookmark:KIP_7]]() List Signer Keys
+      * :x: :full_moon: [:bookmark:KIP_6] List Orders
+      * :x: :new_moon: [:bookmark:KIP_7] List Signer Keys
    * :zap: Security
-      * :x: :new_moon: [[:bookmark:KIP_8]]() Response Signing
-      * :x: :new_moon: [[:bookmark:KIP_9]]() Endpoints Whitelist
+      * :x: :new_moon: [:bookmark:KIP_8] Response Signing
+      * :x: :new_moon: [:bookmark:KIP_9] Endpoints Whitelist
   
 3. :eyes: Web User Interface (Static Page)
    * :zap: Account Management
-      * :x: :full_moon: [[:bookmark:KIP_10]]() Token Balances (Preview)
-      * :x: :new_moon: [[:bookmark:KIP_11]]() Token Transfers (Withdraw)
-      * :x: :new_moon: [[:bookmark:KIP_12]]() Trusted Signatures (Whitelist)
+      * :x: :full_moon: [:bookmark:KIP_10] Token Balances (Preview)
+      * :x: :new_moon: [:bookmark:KIP_11] Token Transfers (Withdraw)
+      * :x: :new_moon: [:bookmark:KIP_12] Trusted Signatures (Whitelist)
    * :x: Order Book Management
-      * :x: :full_moon: [[:bookmark:KIP_13]]() Select & Preview Order Books
-      * :x: :full_moon: [[:bookmark:KIP_14]]() Place & Cancel Orders
+      * :x: :full_moon: [:bookmark:KIP_13] Select & Preview Order Books
+      * :x: :full_moon: [:bookmark:KIP_14] Place & Cancel Orders
    * :zap: Orders Management
-      * :x: :new_moon: [[:bookmark:KIP_15]]() List & Cancel Orders 
+      * :x: :new_moon: [:bookmark:KIP_15] List & Cancel Orders 
    * :zap: Network Management
-      * :x: :new_moon: [[:bookmark:KIP_16]]() List Validator 
-      * :x: :new_moon: [[:bookmark:KIP_17]]() List Registered Signer Keys 
+      * :x: :new_moon: [:bookmark:KIP_16] List Validator 
+      * :x: :new_moon: [:bookmark:KIP_17] List Registered Signer Keys 
    * :zap: Security
-      * :x: :new_moon: [[:bookmark:KIP_18]]() Signer Key Verification
+      * :x: :new_moon: [:bookmark:KIP_18] Signer Key Verification
 
 ## Objective
 
