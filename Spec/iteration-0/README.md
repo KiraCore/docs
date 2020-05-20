@@ -23,7 +23,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
 2. :globe_with_meridians: REST Server / JSON RPC
    * :zap: Queries 
       * :x: :full_moon: [[:bookmark:KIP_5]](order-book.md#KIP_5) List Order Books
-      * :x: :full_moon: [:bookmark:KIP_6] List Orders
+      * :x: :full_moon: [[:bookmark:KIP_6]](order-query.md#KIP_5) List Orders
       * :x: :new_moon: [:bookmark:KIP_7] List Signer Keys
    * :zap: Security
       * :x: :new_moon: [:bookmark:KIP_8] Response Signing

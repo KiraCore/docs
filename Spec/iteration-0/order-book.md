@@ -55,7 +55,7 @@ By using `query_order_books` it must be possible to quickly query order books by
 
 We should expect large number of queries requesting full list of order book Id's as well sub-lists such as list queried by only specific base or quote currency.
 
-Every response of the `query_order_book` command should be a JSON array containing all info regarding order books (with exception for orders, which must be queried separately for by individual order books)
+Every response of the `query_order_books` command should be a JSON array containing all info regarding order books (with exception for orders, which must be queried separately for by individual order books)
 
 Example:
 ```
@@ -70,7 +70,7 @@ Example:
 ]
 ```
 
-_NOTE: We should aim for no mare than 512B stored per each order book record, that implies that 2048 unique order books would occupy 1 MB of data that client side would have to digest._
+_NOTE: We should aim for no more than 512B stored per each order book record, that implies that 2048 unique order books would occupy 1 MB of data that client side would have to digest._
 
 
 

@@ -12,10 +12,12 @@ Orders placed using `create_limit_order` transaction must be linked to a particu
 
 The `create_limit_order` transaction requires following properties
  * `order_book_id` - globally unique order book identifier or index
- * `type` - type of order (`limit_buy`, `limit_sell`)
+ * `type` - type of order (`limit_buy`, `limit_sell`) - should be an enum
  * `amount`- int64 value (by the lowest denomination)
- * `price` - limit price
- * `expires` - UTC timestamp when the order will be cancelled
+ * `price` - int64 value - limit price
+ * `expires` - int32 UTC (seconds) timestamp when the order will be cancelled
+
+_NOTE: Prices, amounts and all other values should always be integers to prevent rounding errors or different (per-region) comma representations when parsing, that float/decimal values might introduce._
 
 _OPTIONAL: In the first iteration of the Kira PoC application limit orders can be ordered by gas paid and executed with a pseudo-random priority, that means, a fully deterministic  pseudo random function can be initialized with the seed equal to first `N` Bytes of the previous block hash. This strategy is a simplest front-running & gas-war prevention method, as it is not guaranteed your order will be processed first even if you pay more GaS._
 
