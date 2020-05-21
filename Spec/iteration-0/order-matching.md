@@ -29,7 +29,9 @@ To determine which orders match we need to first delete all expired orders and u
 
 As the result of `create_limit_order` transaction `id` should be returned to the user, otherwise error response if order was not created.
 
-### Pseudo Algorithm (OPTIONAL)
+### Example Algorithm (OPTIONAL)
+
+> Random Matching Function (RMF)
 
 _NOTE: This algorithm doesn't give you the best price, but does give you better front-running protection. It effectively simulates your chain running at close to `0 seconds` block time where each transaction lands in the block by the mere chance due to randomness of the networking delay. Effectively this is a network delay simulator._
 
