@@ -39,18 +39,21 @@ _ISSUES: This algorithm, can be cheated by attacker creating multiple front-run 
 
 1. Load new orders and order book state to RAM (`tmp state`)
 2. Remove expired and cancelled orders
-3. Order new sell orders by gas
-4. Order new buy orders by gas
-5. Assign id's and place in the `tmp state` all new orders that increase liquidity
+3. Order new sell orders by tx fee (and hash if the fee paid is the same)
+4. Order new buy orders by tx fee (and hash if the fee paid is the same)
+5. Assign order `id`'s and place in the `tmp state` all new orders that increase liquidity
 6. Generate `seed` for the random function from the has of the last block
 7. Randomize remaining sell orders using `seed`
 8. Randomize remaining buy orders using `seed`
 9.  Take two orders - one from the new buy list and one from new sell list
 10. Match your two orders together and with the book state
-11. Assign id's and place amounts that were not matched in the `tmp state` for the next iteration
-12. Go to point `9.` until you run out of new buy and sell orders to match or place
+11. Assign order `id`'s and place amounts that were not matched in the `tmp state` for the next iteration
+12. Go to point `9` until you run out of new buy and sell orders to match or place
 13. Place your `tmp state` in the KV store to persist the results
 
+_NOTE: If you match new orders with existing state and there are two or more orders in the state at the same price you must match older orders first (orders with younger `id`'s)_
+
+_NOTE: It is important that step `5` is executed after step `3` and `4`, this helps to add liquidity before removing it in the step `10`. Furthermore note that step `3` and `4` must be **absolutely** deterministic, that's why if fee paid is the same the tx hash has to be used to determine order (simplest algo for achieving it might be creating index prefixed with N Bytes of the gas price and then sorting by that index)._
 
 ## KIP_3
 > Cancel Order
