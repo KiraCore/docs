@@ -9,6 +9,9 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
   * `infra`
   * `docs`
 * [Arjun Andra](https://github.com/arjunandra) - `arjunandra`
+  * kiraHub/sekai Setup & Initialization - Formatting To PersistenceSDK File Structure, app.go, module.go, etc. 
+  * KIP_1 - OrderBook Structuring, Message Definition, Keeper Functions, Handler Functions, CLI Entry Points
+  * KIP_5 - Querier Structuring, Keeper Functions To Query, CLI Entry Points
 * [Chaitanya Agarwal](https://github.com/agarwalchaitanya) - `agarwalchaitanya`
 * [Siddarth Vijay](https://github.com/SiddarthVijay) - `SiddarthVijay`
 * [Deepanshu Tripathi](https://github.com/deepanshutr) - `deepanshutr`
