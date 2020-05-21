@@ -1,9 +1,5 @@
-# Order Matching 
+# KIP_2
 
-Order matching refers to matching buy and sell orders.
-
-
-## KIP_2
 > Place Order
 
 The default order type in Kira Protocol should be a limit order. A limit buy order can only be executed at the limit price or lower, and a limit sell order can only be executed at the limit price or higher. A limit order can only be filled if the market price reaches it. Limit orders do NOT guarantee execution, but ensure that users do not pay more than a defined price.
@@ -29,15 +25,15 @@ To determine which orders match we need to first delete all expired orders and u
 
 As the result of `create_limit_order` transaction `id` should be returned to the user, otherwise error response if order was not created.
 
-### Example Algorithm (OPTIONAL)
+## Example Algorithm
 
 > Random Matching Function (RMF)
 
 _NOTE: This algorithm doesn't give you the best price, but does give you better front-running protection. It effectively simulates your chain running at close to `0 seconds` block time where each transaction lands in the block by the mere chance due to randomness of the networking delay. Effectively this is a network delay simulator._
 
-_ISSUES: This algorithm, can be cheated by the validator creating random tx to influence output of the pseudo-random function until his order is prioritized. However Kira has permissioned validator set so detecting such manipulations would result in the loss of the validator seat._
+_ISSUES: This algorithm, can be cheated by the validator through cenzorship attack or creating random tx to influence output of the pseudo-random function until his order is prioritized. However Kira has permissioned validator set so detecting such manipulations would result in the loss of the validator seat._
 
-_ISSUES: This algorithm, can be cheated by attacker creating multiple front-run tx'es to increase his chances of front-running. However attacker will have to incur higher tx cost and will require proportionally large amount of assets in his account balance, we might also consider increasing tx fees if particular account tries to submit more than one tx in the same block._
+_ISSUES: This algorithm, can be cheated by attacker creating multiple front-run tx'es to increase his chances of front-running. However attacker will have to incur higher tx cost and will require proportionally large amount of assets in his account balance. Finally (After PoC) we might also consider increasing tx fees if particular account tries to submit more than one tx in the same block._
 
 1. Load new orders and order book state to RAM (`tmp state`)
 2. Remove expired and cancelled orders
@@ -47,7 +43,7 @@ _ISSUES: This algorithm, can be cheated by attacker creating multiple front-run 
 6. Generate `seed` for the random function from the has of the last block
 7. Randomize remaining sell orders using `seed`
 8. Randomize remaining buy orders using `seed`
-9.  Take two orders - one from the new buy list and one from new sell list
+9. Take two orders - one from the new buy list and one from new sell list
 10. Match your two orders together and with the book state
 11. Assign order `id`'s and place amounts that were not matched in the `tmp state` for the next iteration
 12. Go to point `9` until you run out of new buy and sell orders to match or place
@@ -56,8 +52,3 @@ _ISSUES: This algorithm, can be cheated by attacker creating multiple front-run 
 _NOTE: If you match new orders with existing state and there are two or more orders in the state at the same price you must match older orders first (orders with younger `id`'s)_
 
 _NOTE: It is important that step `5` is executed after step `3` and `4`, this helps to add liquidity before removing it in the step `10`. Furthermore note that step `3` and `4` must be **absolutely** deterministic, that's why if fee paid is the same the tx hash has to be used to determine order (simplest algo for achieving it might be creating index prefixed with N Bytes of the gas price and then sorting by that index)._
-
-## KIP_3
-> Cancel Order
-
-By using `cancel_order` it must be possible to cancel (remove from state) existing orders by using order `id`.

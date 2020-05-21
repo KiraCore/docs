@@ -1,9 +1,4 @@
-
-# Order Book
-
-Order book is represented by a unique identifier that references list of orders. Order book links two different tokens and enables trading of those tokens by providing an easy to query reference.
-
-## KIP_1
+# KIP_1
 > Create Order Book
 
 Any user with non zero balance of at least `2` **different** tokens (can be a same token originating from 2 different networks) must be able to crate an order book by sending a `create_order_book` transaction.
@@ -29,7 +24,7 @@ The construction of the ID should be designed in a way to enable query by prefix
 
 When the order book is created an incremental only and unique `last_order_book_index` (4 Bytes) aka `index` should be assigned to it, in order to ensure that orders can reference order-book in the non expensive manner (query by suffix).
 
-Example (Pseudo-Code) Solution:
+## Example (Pseudo-Code) Solution:
 ```
 ID == 
 (blake(curator).take(4).toHex() << 12) + 
@@ -41,40 +36,3 @@ len(last_order_book_index).toHex()
 As the result of `create_order_book` transaction `id` should be returned to the user, otherwise error response if `index` already exists.
 
 _NOTE: This might not be the most optimal way to create ID, and there is a possibility of currency name or creator address collisions, but those should not be an issue as results from the prefix query can be further refined_ 
-
-## KIP_5
-> List Order Books
-
-By using `query_order_books` it must be possible to quickly query order books by:
-* ID
-* Index
-* Quote Currency
-* Base Currency
-* Trading Pair (Base & Quote) - in specific order
-* Curator
-
-We should expect large number of queries requesting full list of order book Id's as well sub-lists such as list queried by only specific base or quote currency.
-
-Every response of the `query_order_books` command should be a JSON array containing all info regarding order books (with exception for orders, which must be queried separately for by individual order books)
-
-Example:
-```
-[
-    {
-        "id":"c8f655f24a0a7361713f5da200000001",
-        "base": "ukex",
-        "quote": "transfer/ibc_token_id/uatom"
-        "curator": "kira15v50ymp6n5dn73erkqtmq0u8adpl8d3ujv2e74",
-        "mnemonic": "My First Demo Order Book or Hash"
-    }, { ... }, ...
-]
-```
-
-_NOTE: We should aim for no more than 512B stored per each order book record, that implies that 2048 unique order books would occupy 1 MB of data that client side would have to digest._
-
-
-
-
-
-
-

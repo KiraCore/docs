@@ -13,17 +13,17 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
 
 1. :link: Blockchain Application 
    * :zap: Order Books Management
-     * :x: :full_moon: [[:bookmark:KIP_1]](order-book.md#KIP_1) Create Order Book
+     * :pick: :full_moon: [[:bookmark:KIP_1]](kip_1.md) Create Order Book
    * :zap: Orders Management
-     * :x: :full_moon: [[:bookmark:KIP_2]](order-matching.md#KIP_2) Place Order
-     * :x: :full_moon: [[:bookmark:KIP_3]](order-matching.md#KIP_3) Cancel Order
+     * :x: :full_moon: [[:bookmark:KIP_2]](kip_2.md) Place Order
+     * :x: :full_moon: [[:bookmark:KIP_3]](kip_3.md) Cancel Order
    * :zap: Key Management
-     * :x: :new_moon: [:bookmark:KIP_4] Signer Key Registration
+     * :x: :new_moon: [[:bookmark:KIP_4]](kip_4.md) Signer Key Registration
   
 2. :globe_with_meridians: REST Server / JSON RPC
    * :zap: Queries 
-      * :x: :full_moon: [[:bookmark:KIP_5]](order-book.md#KIP_5) List Order Books
-      * :x: :full_moon: [[:bookmark:KIP_6]](order-query.md#KIP_5) List Orders
+      * :pick: :full_moon: [[:bookmark:KIP_5]](kip_5.md) List Order Books
+      * :x: :full_moon: [[:bookmark:KIP_6]](kip_6.md) List Orders
       * :x: :new_moon: [:bookmark:KIP_7] List Signer Keys
    * :zap: Security
       * :x: :new_moon: [:bookmark:KIP_8] Response Signing
@@ -49,7 +49,9 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
 
 The main goal of iteration 0 is to crate a minimum viable DEX 
 
+## Foreword
 
+Various technical definitions relevant to iteration 0 can be found in [glossary](glossary.md). In case where any part of the documentation is not clear or difficult to understand please create a relevant github issue.
 
 
 
