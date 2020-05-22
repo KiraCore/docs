@@ -1,7 +1,7 @@
 
 # Iteration 0
 
-The Iteration 0 or Proof of Concept (PoC) is a first evolutionary step of the Kira Protocol. The main goal of this iteration is to create minimum viable blockchain-application based service that end user can interact with. The subject of the PoC is a Decentralized Exchange (DEX), a blockchain application containing minimum set of instructions necessary to enable 2 or more users to trustlessly exchange their tokens.
+The `Iteration 0` or Proof of Concept (PoC) is a first evolutionary step of the Kira Protocol. The main goal of this iteration is to create minimum viable blockchain-application based service that end user can interact with. The subject of the PoC is a Decentralized Exchange (DEX), a blockchain application containing minimum set of instructions necessary to enable 2 or more users to trustlessly exchange their tokens.
 
 _NOTE: Kira Protocol is NOT a Decentralized Exchange, however DEX was chosen by us as the simplest DeFi system that can be used for the purpose of demonstrating protocol capabilities in the later iterations._
 
@@ -45,13 +45,21 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
    * :zap: Security
       * :x: :new_moon: [:bookmark:KIP_18] Signer Key Verification
 
+### Dependency Map
+
+_This map defines order in which tasks must be executed to fulfill goals of the `Iteration 0`_
+
+* **KIP 14** ⬅ **KIP 3** ⬅ **KIP 2** ⬅ **KIP 1**
+* **KIP 13** ⬅ **KIP 5** ⬅ **KIP 1**
+* **KIP 12** ⬅ **KIP 8** ⬅ **KIP 4**
+
 ## Objective
 
-The main goal of iteration 0 is to crate a minimum viable DEX 
+The main goal of `Iteration 0` is to crate a minimum viable DEX 
 
 ## Foreword
 
-Various technical definitions relevant to iteration 0 can be found in [glossary](glossary.md). In case where any part of the documentation is not clear or difficult to understand please create a relevant github issue.
+Various technical definitions relevant to `Iteration 0` can be found in [glossary](glossary.md). In case where any part of the documentation is not clear or difficult to understand please create a relevant github issue.
 
 
 
