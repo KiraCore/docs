@@ -15,6 +15,9 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
 * [Chaitanya Agarwal](https://github.com/agarwalchaitanya) - `agarwalchaitanya`
 * [Siddarth Vijay](https://github.com/SiddarthVijay) - `SiddarthVijay`
 * [Deepanshu Tripathi](https://github.com/deepanshutr) - `deepanshutr`
+* [Amanuel Yosief Mussie](https://github.com/AmanuelYosief) - `AmanuelYosief`
+  * `website`
+  * `docs`
 
 
 
