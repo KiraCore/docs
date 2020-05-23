@@ -59,7 +59,7 @@ The main goal of `Iteration 0` is to crate a minimum viable DEX
 
 ## Foreword
 
-Various technical definitions relevant to `Iteration 0` can be found in [glossary](glossary.md). In case where any part of the documentation is not clear or difficult to understand please create a relevant github issue.
+Various technical definitions relevant to `Iteration 0` can be found in [glossary](../glossary.md). In case where any part of the documentation is not clear or difficult to understand please create a relevant github issue.
 
 
 

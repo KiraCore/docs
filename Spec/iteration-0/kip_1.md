@@ -36,3 +36,15 @@ len(last_order_book_index).toHex()
 As the result of `create_order_book` transaction `id` should be returned to the user, otherwise error response if `index` already exists.
 
 _NOTE: This might not be the most optimal way to create ID, and there is a possibility of currency name or creator address collisions, but those should not be an issue as results from the prefix query can be further refined_ 
+
+## Fees (OPTIONAl)
+
+### Execution Fee
+
+There must be a custom, flat [execution fee](../fees.md#execution-fee) `Ε` paid when order book is created as the result of `create_order_book` execution.
+
+Execution Fee should be set at `$50` or (`1000 KEX`)
+
+### Fees Distribution
+
+All fees paid in the native or non native currencies should be sent to the address controlled by the "rewards distribution module" (RDM). The RDM module does not have to be be implemented in the `Iteration 0`

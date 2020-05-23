@@ -52,3 +52,24 @@ _ISSUES: This algorithm, can be cheated by attacker creating multiple front-run 
 _NOTE: If you match new orders with existing state and there are two or more orders in the state at the same price you must match older orders first (orders with younger `id`'s)_
 
 _NOTE: It is important that step `5` is executed after step `3` and `4`, this helps to add liquidity before removing it in the step `10`. Furthermore note that step `3` and `4` must be **absolutely** deterministic, that's why if fee paid is the same the tx hash has to be used to determine order (simplest algo for achieving it might be creating index prefixed with N Bytes of the gas price and then sorting by that index)._
+
+## Fees (OPTIONAl)
+
+### Execution Fee
+
+There must be a custom, flat [execution fee](../fees.md#execution-fee) `Ε` paid when order is matched as the result of `create_limit_order` execution. This fee should be paid only in case where liquidity is taken from the book to allow the network control potential tx spam.
+
+Execution Fee `Ε` for the `create_limit_order` transaction should be set at `$0.1` or (`2 KEX`)
+
+### Incentivization Fee
+
+There must be a custom, % [incentivization fee](../fees.md#incentivization-fee) `Ι` paid when order is matched. Fee `Ι` should be paid only by the taker of liquidity in the currency he is buying or selling. 
+
+Incentivization Fee `Ι` should be set at `0.1%`
+
+### Fees Distribution
+
+All fees paid in the native or non native currencies should be sent to the address controlled by the "rewards distribution module" (RDM). The RDM module does not have to be be implemented in the `Iteration 0`
+
+
+

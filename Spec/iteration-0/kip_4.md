@@ -17,3 +17,14 @@ _NOTE: When new key is added all expired keys of the user should be removed from
 
 Metadata index for the KV store must consist of the `4 Bytes` prefix of the blake hashed user public key, `4 Bytes` blake hashed `pubkey` and `4 Bytes` of unique, iterative id.
 
+## Fees (OPTIONAl)
+
+### Execution Fee
+
+There must be a custom, flat [execution fee](../fees.md#execution-fee) `Ε` paid when signer key is created as the result of `rotate_signer_key` execution.
+
+Execution Fee should be set at `$5` or (`100 KEX`)
+
+### Fees Distribution
+
+All fees paid in the native or non native currencies should be sent to the address controlled by the "rewards distribution module" (RDM). The RDM module does not have to be be implemented in the `Iteration 0`
