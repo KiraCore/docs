@@ -15,7 +15,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
    * :zap: Order Books Management
      * :pick: :full_moon: [[:bookmark:KIP_1]](kip_1.md) Create Order Book
    * :zap: Orders Management
-     * :x: :full_moon: [[:bookmark:KIP_2]](kip_2.md) Place Order
+     * :pick: :full_moon: [[:bookmark:KIP_2]](kip_2.md) Place Order
      * :x: :full_moon: [[:bookmark:KIP_3]](kip_3.md) Cancel Order
    * :zap: Key Management
      * :x: :new_moon: [[:bookmark:KIP_4]](kip_4.md) Signer Key Registration
