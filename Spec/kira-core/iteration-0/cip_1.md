@@ -1,9 +1,9 @@
 # CIP_1
 > Create Kira Core Landing Page
 
-Kira Core requires a main landing page, a static website (which can be hosted directly from the [github pages](https://pages.github.com/)). Website should serve a purpose of informing users about Kira Core products and services though an engaging visual format. Website should be accessible and pleasing to view in both PC and mobile format.
+Kira Core requires a main landing page, a static website (which can be hosted directly from the [github pages](https://pages.github.com/)). Website should serve a purpose of informing users about Kira Core products and services through an engaging visual format. Website should be accessible and pleasing to view in both PC and mobile format.
 
-Website should be animalistic, without any sort of a typical ICO of Cryptocurrencies page feel. There should be no "rockets" or any other similar symbols present.
+Website should be minimalistic/modern, without any sort of a typical ICO of Cryptocurrencies page feel. There should be no "rockets" or any other similar symbols present.
 
 Colours should match [Kira Core logo](../img/kira-core.png) and be light, fitting Japanese minimalism style.
 
@@ -51,7 +51,7 @@ Our powerful network explorer and  secure staking infrastructure exposes your in
 *  Allows operating private DEX zones that anyone can trust
 
 ### MBPoS Consensus
-* Description - The Multi-Bonded Proof of Stake (MBPoS) is powered by [Tendermint](https://tendermint.com/) and belongs to the family of the Byzantine Fault Tolerant consensus systems. MBPoS enables users to generate revenues from staking both cryptocurrencies and real-world assets such as fiat and commodities. One of the most innovative innovative features is mitigation of the slashing risk though governance module assistance to resolve faults.
+* Description - The Multi-Bonded Proof of Stake (MBPoS) is powered by [Tendermint](https://tendermint.com/) and belongs to the family of the Byzantine Fault Tolerant consensus systems. MBPoS enables users to generate revenues from staking both cryptocurrencies and real-world assets such as fiat and commodities.
 
 #### Features
 * Earn revenue by staking real world assets
@@ -80,7 +80,6 @@ Our powerful network explorer and  secure staking infrastructure exposes your in
   * Linkedin: `https://www.linkedin.com/in/milanavalmont/`
   * Twitter: `https://twitter.com/Milanademort`
 
-
 * Mateusz Grzelak - `Founder & Chief Technology Officer`
   * Image: [link](../img/asmodat.png)
   * Linkedin: `https://www.linkedin.com/in/mateusz-grzelak-445b7499/`
@@ -107,7 +106,9 @@ Our powerful network explorer and  secure staking infrastructure exposes your in
 ## Partners
 
 * Simply VC: `https://simply-vc.com.mt/`
+  * logo: [link](../img/simply-vc.png)
 * Persistence: `https://persistence.one/`
+  * logo: [link](../img/persistence.png) 
 
 ## Media and Resources
 * Telegram - `https://t.me/kirainterex`
