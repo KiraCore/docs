@@ -1,3 +1,5 @@
+
+
 # Kira Protocol Licenses and Documentation
 
 Kira Protocol and improvements to Bonded/Nominated Proof of Stake consensus mechanism in the form of the Multi-Bonded Proof of Stake as well as other Kira Core inventions are released under the MIT license with exception for the Initial Delegator Offerings.
