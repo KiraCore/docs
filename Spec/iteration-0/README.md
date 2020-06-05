@@ -24,7 +24,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
    * :zap: Queries 
       * :pick: :full_moon: [[:bookmark:KIP_5]](kip_5.md) List Order Books
       * :x: :full_moon: [[:bookmark:KIP_6]](kip_6.md) List Orders
-      * :x: :new_moon: [:bookmark:KIP_7] List Signer Keys
+      * :x: :new_moon: [[:bookmark:KIP_7]](kip_7.md) List Signer Keys
    * :zap: Security
       * :x: :new_moon: [:bookmark:KIP_8] Response Signing
       * :x: :new_moon: [:bookmark:KIP_9] Endpoints Whitelist
