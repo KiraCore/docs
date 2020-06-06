@@ -40,7 +40,7 @@ _ISSUES: This algorithm, can be cheated by attacker creating multiple front-run 
 3. Order new sell orders by tx fee (and hash if the fee paid is the same)
 4. Order new buy orders by tx fee (and hash if the fee paid is the same)
 5. Assign order `id`'s and place in the `tmp state` all new orders that increase liquidity but would not require matching
-6. Generate `seed` for the random function from the has of the last block
+6. Generate `seed` for the random function from the hash of the last block
 7. Randomize remaining sell orders using `seed`
 8. Randomize remaining buy orders using `seed`
 9. Take two orders - one from the new buy list and one from new sell list
