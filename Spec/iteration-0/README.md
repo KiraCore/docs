@@ -11,7 +11,7 @@ The PoC consist of 3 milestones that must be completed with defined below capabi
 
 _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future iterations and are NOT a priority for delivery._
 
-1. :link: Blockchain Application 
+1. :link: **Blockchain Application**
    * :zap: Order Books Management
      * :pick: :full_moon: [[:bookmark:KIP_1]](kip_1.md) Create Order Book
    * :zap: Orders Management
@@ -20,16 +20,16 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
    * :zap: Key Management
      * :x: :new_moon: [[:bookmark:KIP_4]](kip_4.md) Signer Key Registration
   
-2. :globe_with_meridians: REST Server / JSON RPC
+2. :globe_with_meridians: **[REST Server / JSON RPC](../rpc/README.md)**
    * :zap: Queries 
       * :pick: :full_moon: [[:bookmark:KIP_5]](kip_5.md) List Order Books
       * :x: :full_moon: [[:bookmark:KIP_6]](kip_6.md) List Orders
       * :x: :new_moon: [[:bookmark:KIP_7]](kip_7.md) List Signer Keys
    * :zap: Security
-      * :x: :new_moon: [:bookmark:KIP_8] Response Signing
+      * :x: :new_moon: [[:bookmark:KIP_8]](kip_8.md) Response Signing
       * :x: :new_moon: [:bookmark:KIP_9] Endpoints Whitelist
   
-3. :eyes: Web User Interface (Static Page)
+3. :eyes: **Web User Interface** (Static Page)
    * :zap: Account Management
       * :x: :full_moon: [:bookmark:KIP_10] Token Balances (Preview)
       * :x: :new_moon: [:bookmark:KIP_11] Token Transfers (Withdraw)

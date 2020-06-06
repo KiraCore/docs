@@ -6,7 +6,7 @@ Every account should be able to register multiple public keys which can later be
 To submit `rotate_signer_key` transaction following properties are required:
 
 * `pubkey` - New public key, should not exceed `4096 bits` (max `512 Bytes`)
-* `type` - Key type enum (e.g. `RSA`, `ECC`, `AES`)
+* `type` - Key type enum (e.g. `secp256k1`, `ed25519`)
 * `expires` - UTC time (`4 Bytes`) when key expires
 * `enabled` - boolean field defining if key is use
 * `owner` - user or curator public key (max `512 Bytes`, defines who can modify this key, this field does not have to be used in PoC)
