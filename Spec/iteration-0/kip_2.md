@@ -39,13 +39,13 @@ _ISSUES: This algorithm, can be cheated by attacker creating multiple front-run 
 2. Remove expired and cancelled orders
 3. Order new sell orders by tx fee (and hash if the fee paid is the same)
 4. Order new buy orders by tx fee (and hash if the fee paid is the same)
-5. Assign order `id`'s and place in the `tmp state` all new orders that increase liquidity
+5. Assign order `id`'s and place in the `tmp state` all new orders that increase liquidity but would not require matching
 6. Generate `seed` for the random function from the has of the last block
 7. Randomize remaining sell orders using `seed`
 8. Randomize remaining buy orders using `seed`
 9. Take two orders - one from the new buy list and one from new sell list
-10. Match your two orders together and with the book state
-11. Assign order `id`'s and place amounts that were not matched in the `tmp state` for the next iteration
+10. Match your two orders together first and then with the book state
+11. Assign order `id`'s and place amounts that were not matched (or would add liquidity without matching) in the `tmp state` for the next iteration of the loop
 12. Go to point `9` until you run out of new buy and sell orders to match or place
 13. Place your `tmp state` in the KV store to persist the results
 

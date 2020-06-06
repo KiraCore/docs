@@ -27,7 +27,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future i
       * :x: :new_moon: [[:bookmark:KIP_7]](kip_7.md) List Signer Keys
    * :zap: Security
       * :x: :new_moon: [[:bookmark:KIP_8]](kip_8.md) Response Signing
-      * :x: :new_moon: [:bookmark:KIP_9] Endpoints Whitelist
+      * :x: :new_moon: [[:bookmark:KIP_9]](kip_9.md) Endpoints Whitelist
   
 3. :eyes: **Web User Interface** (Static Page)
    * :zap: Account Management
