@@ -1,4 +1,18 @@
+# Kira Docs
 
+Kira documentation is a full guide enabling you to easily onboard, track our progress and deep dive into development stack. To view the roadmap see any of the "Latest Specs"
+
+![picture 2](https://i.imgur.com/1L5LDHb.png)  
+
+## Table of Content
+* [Kira Protocol Whitepaper](Kira-Protocol-Whitepaper.pdf) - High Level Overview of Our Main Products
+* [The Spec](spec/README.md) - Detailed Development Instructions
+  * [Latest Kira Protocol Spec](spec/iteration-0/README.md)
+    * [RPC Documentation](spec/rpc/README.md)
+    * [CLI Documentation](spec/cli/README.md)
+  * [Latest Kira Core Spec](spec/kira-core/iteration-0/README.md)
+* [Infra](infra/README.md) - Detailed Instructions for Local Deployment
+* [Contributors](contributors.md) - Self-curated List of Contributors and Their Input
 
 # Kira Protocol Licenses and Documentation
 
