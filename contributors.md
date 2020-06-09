@@ -18,6 +18,8 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
 * [Amanuel Yosief Mussie](https://github.com/AmanuelYosief) - `AmanuelYosief`
   * `website`
   * `docs`
+* [sudheerdarla](https://github.com/sudheerdarla) - `Hark99`
+  * Website & Logo Design
 
 
 
