@@ -21,19 +21,19 @@ For example if developer works on the `KIP_7` and `KIP_32` on the same branch, t
 ```
 master
   |
-  |-->kip_1                     * development of KIP_1 starts
-  |    |                        
-  |--- | ->kip_2                * development of KIP_2 starts
-  |    |    |                   
-  |    \--- | -> v0.0.1         * development of KIP_1 complete
-  |         |       |           
-  |         |<------/           * KIP_2 must merge latest v0.0.1
-  |         |                   
-  |         \--> v0.0.2         * development of KIP_2 complete
-  |                 |           * conflicts resolving & testing
-  |                 \-> v0.1.0  * iteration 1 is complete
-  |                      |      * conflicts resolving & testing
-  |<-------------------v1.0.0   * release and merge to master
+  |-->kip_1                      * development of KIP_1 starts
+  |    |                         
+  |--- | ->kip_2                 * development of KIP_2 starts
+  |    |    |                    
+  |    \--- | -> v0.0.1          * development of KIP_1 complete
+  |         |       |            
+  |         |<------/            * KIP_2 must merge latest v0.0.1
+  |         |                    * conflicts resolving & testing
+  |         \--> v0.0.2          * development of KIP_2 complete
+  |                 |            * debugging & testing
+  |                 \-> v0.1.0   * iteration 1 is complete
+  |                       |      * cleanup, refactoring & testing
+  |<--------------------v1.0.0   * release and merge to master
 ```
 
 
