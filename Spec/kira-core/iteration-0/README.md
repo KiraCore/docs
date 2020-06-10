@@ -9,6 +9,8 @@ _NOTE: To learn more about Kira Core company see [about](../about.md) file._
 
 The MVP consist of 1 milestones that must be completed with defined below capabilities. This iteration scope is also divided into **OPTIONAL** :new_moon: and **ESSENTIAL** :full_moon: tasks. Each task also contains a status, which is **PENDING** :x:, **ACTIVE** :pick: or **COMPLETED** :white_check_mark:. Each feature :zap: MUST have assigned [:bookmark:CIP] (Kira Core Improvement Proposal) tags to each of it's tasks and dedicated documentation page.
 
+To learn more about branches and development process, see [versioning](../../versioning.md) documentation.
+
 _NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future iterations and are NOT a priority for delivery._
 
 1. :eyes: Web User Interface (Static Page)

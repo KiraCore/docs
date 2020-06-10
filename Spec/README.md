@@ -6,7 +6,7 @@ _NOTE: All contributors to the Kira Core stack, spec and other aspects of the or
 
 ## Kira Protocol Implementation Specifications
 
-In this document you will find all references necessary to understand and execute each stage of the Kira Protocol implementation. 
+In this document you will find all references necessary to understand and execute each stage of the Kira Protocol implementation.
 
 * [Iteration-0](iteration-0/README.md)
     * Proof of Concept Blockchain Application
