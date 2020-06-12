@@ -11,7 +11,10 @@ Kira documentation is a full guide enabling you to easily onboard, track our pro
     * [RPC Documentation](spec/rpc/README.md)
     * [CLI Documentation](spec/cli/README.md)
   * [Latest Kira Core Spec](spec/kira-core/iteration-0/README.md)
-* [Infra](infra/README.md) - Detailed Instructions for Local Deployment
+  * [Branches & Versioning](spec/versioning.md)
+* [Infra](infra/README.md) - Detailed Deployment Instructions
+  * [Setup](infra/setup.md) 
+  * [Networking](infra/networking.md) 
 * [Contributors](contributors.md) - Self-curated List of Contributors and Their Input
 
 # Kira Protocol Licenses and Documentation
