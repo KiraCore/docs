@@ -20,7 +20,7 @@ By checking `Τ` of any submitted transaction full node will have instant abilit
 
 It is not guaranteed that all submitted transaction will be successful, for example operation to execute function `f` might timeout, or parameters submitted by the users might not be valid in the context of `f`. In such case transaction should be appended in the state and `min_tx_fee` charged despite failure to execute `f`. This should prevent tx spam attacks where user submits invalid properties or constantly triggers failing functions.
 
-To protect user from accidentally paying unreasonable amount of transaction fees (e.g. due the the fault of the client application) there must exist a `max_tx_fee` above which no transaction should be accepted.
+To protect user from accidentally paying unreasonable amount of transaction fees (e.g. due the fault of the client application) there must exist a `max_tx_fee` above which no transaction should be accepted.
 
 Given initial valuation of KEX at `$0.05` per token, `min_tx_fee` is suggested to be initially defined at the amount of `0.1 KEX` (`~ $0.005`) and  `max_tx_fee` as `100 KEX` (`$5`).
 

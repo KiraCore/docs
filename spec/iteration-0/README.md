@@ -11,7 +11,7 @@ The PoC consist of 3 milestones that must be completed with defined below capabi
 
 To learn more about branches and development process, see [versioning](../versioning.md) documentation.
 
-_NOTE: All OPTIONAL :new_moon: features CAN become the the scope of the future iterations and are NOT a priority for delivery._
+_NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future iterations and are NOT a priority for delivery._
 
 1. :link: **Blockchain Application**
    * :zap: Order Books Management

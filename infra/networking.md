@@ -33,7 +33,7 @@ _NOTE: It might happen that as result of VM shutdown, hibernation or other issue
 
 ### Validators
 
-Each "Kira Hub" validator deployed within this network has automatically assigned IP address with a following format: `101.1.0.X` where `X` defines the the node identifier.
+Each "Kira Hub" validator deployed within this network has automatically assigned IP address with a following format: `101.1.0.X` where `X` defines the node identifier.
 
 For example, `validator-1` will have ip `101.1.0.1` assigned to its container while `validator-67` will have ip `101.1.0.67`
 
