@@ -26,7 +26,7 @@ _This map defines order in which tasks must be executed to fulfill goals of the 
 
 ## Objective
 
-The main goal of `Iteration 0` is to crate a minimum viable landing page
+The main goal of `Iteration 0` is to create a minimum viable landing page
 
 ## Foreword
 

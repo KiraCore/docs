@@ -57,7 +57,7 @@ _This map defines order in which tasks must be executed to fulfill goals of the 
 
 ## Objective
 
-The main goal of `Iteration 0` is to crate a minimum viable DEX 
+The main goal of `Iteration 0` is to create a minimum viable DEX 
 
 ## Foreword
 
