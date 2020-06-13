@@ -1,4 +1,4 @@
-# Workstation Setup
+# [⏎](README.md) Workstation Setup
 
 **WARNING: Because many users might have access to this repository or apply changes to the code that might compromise your environment, it is mandatory for everyone to utilise VM as your working environment at all times. Your host should never, under any circumstances execute any scripts even if written by you alone due to potential malicious behavior of dependencies. If despite those warnings you decide to launch `infra` on your host machine then we take no responsibilities for potential damages of your hardware or files**
 
@@ -25,11 +25,11 @@ For the purpose of setting up development environment we will
 
     > _NOTE: You will be prompted to input branch names you are working with as well as email address where you will receive notifications, to simplify the setup you can press [ENTER] key every time you are prompted to used the default (recommended) settings_
 
-```
-sudo -s
+    ```
+    sudo -s
 
-cd /tmp && rm -f ./init.sh && wget https://raw.githubusercontent.com/KiraCore/infra/master/workstation/init.sh -O ./init.sh && chmod 777 ./init.sh && ./init.sh
-```
+    cd /tmp && rm -f ./init.sh && wget https://raw.githubusercontent.com/KiraCore/infra/master/workstation/init.sh -O ./init.sh && chmod 777 ./init.sh && ./init.sh
+    ```
 
 5. Go though installation setup of your working environment
 

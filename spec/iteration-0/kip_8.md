@@ -1,4 +1,4 @@
-# KIP_8
+# [⏎](README.md#Roadmap) KIP_8
 > RPC Response Signing
 
 Every response of the [RPC](../rpc/README.md) should be signed using `ed25519` signature. Every full-node should have a random signing key created when started for the first time. It must be possible to query public signing key of the node using CLI to later register it on-chain as defined by the [KIP_4](kip_4.md).

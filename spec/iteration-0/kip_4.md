@@ -1,4 +1,4 @@
-# KIP_4
+# [⏎](README.md#Roadmap) KIP_4
 > Register Signer Key
 
 Every account should be able to register multiple public keys which can later be used to sign RPC responses or in general used for other various purposes that require a hot key - including creating session keys which can help to rate-limit queries and help prevent DOS attacks. 

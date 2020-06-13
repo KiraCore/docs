@@ -1,5 +1,5 @@
 
-# KIP_6
+# [⏎](README.md#Roadmap) KIP_6
 > List orders
 
 After initial order book list query, client application must be able to query (using `query_orders` command) all orders placed using `create_limit_order` and in the future other `create_xxx_oder` type commands.

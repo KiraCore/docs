@@ -1,4 +1,4 @@
-# KIP_7
+# [⏎](README.md#Roadmap) KIP_7
 > List Signer Keys
 
 By using `query_signer_keys` it must be possible to list all public keys belonging to specific user as well as a specific key to for example find out if it belongs to a specific user.

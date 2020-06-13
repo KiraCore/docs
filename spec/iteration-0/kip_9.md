@@ -1,4 +1,4 @@
-# KIP_9
+# [⏎](README.md#Roadmap) KIP_9
 > Endpoint Whitelist
 
 Every full node exposing RPC must be able to define individual endpoints that can be accessed in the rate-limited manner by authenticated or unauthenticated clients.

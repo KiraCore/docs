@@ -1,4 +1,4 @@
-# CIP_1
+# [⏎](README.md#Roadmap) CIP_1
 > Create Kira Core Landing Page
 
 Kira Core requires a main landing page, a static website (which can be hosted directly from the [github pages](https://pages.github.com/)). Website should serve a purpose of informing users about Kira Core products and services through an engaging visual format. Website should be accessible and pleasing to view in both PC and mobile format.
@@ -8,8 +8,6 @@ Website should be minimalistic/modern, without any sort of a typical ICO of Cryp
 Colours should match [Kira Core logo](../img/kira-core.png) and be light, fitting Japanese minimalism style.
 
 ![picture 4](https://i.imgur.com/uwDfZEO.png)
-
-
 
 ### Useful Resources
 
