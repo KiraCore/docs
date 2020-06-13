@@ -16,7 +16,7 @@ Every time a new non-stable release is being worked on, a feature branch followi
 For example if developer works on the `KIP_7` and `KIP_32` on the same branch, the feature branch should be named `kip_7_32` where `N` represents a proposal number. Once the feature branch is tested a developer can create a new branch off his feature branch called `v.X.Y.5` for example where `X` and `Y` are numbers depending on the iteration, and `5` implies that this branch contains `5` features including `KIP_7` and `KIP_32`.
 
 
-## Example Workflow
+### Example Workflow
 
 ```
 master
@@ -36,6 +36,19 @@ master
   |<--------------------v1.0.0   * release and merge to master
 ```
 
+## Testing 
 
+Before any feature branch `vX.Y.*` becomes merged into milestone branch `vX.*.0` or milestone branch merged into release branch milestone branch `v*.0.0` there might be a requirement for debugging and testing. In such case a branch being debugged by a tester should be cloned into a new branch with a suffix `-debug`, e.g. `v0.0.2-debug` or `v0.1.0-debug`.
 
+Successfully tested debug branch with changes can be merged into its original branch after developer who created the original branch is informed about changes. For that purpose a pull-request can be created.
 
+### Example Workflow
+
+```
+v0.0.1
+  |
+  |--> v0.0.1-debug
+  |      |
+  |      |
+  |<-----/ (PR)
+```
