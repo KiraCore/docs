@@ -55,6 +55,5 @@ curl 101.1.0.X:10002/node_info
 
 * Network and containers not reachable
 
-> It might happen that after VM sleep docker network is no longer responsive preventing containers to communicate with each other, to fix this issue you can execute a `systemctl restart NetworkManager docker` in the terminal console of the VM.
-
+> It might happen that after VM sleep docker network is no longer responsive preventing containers to communicate with each other, to fix this issue you can execute a `systemctl restart NetworkManager docker` in the terminal console of the VM or use `Re-START All Containers` option in the Kira Manager.
 

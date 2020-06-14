@@ -60,11 +60,12 @@ For the purpose of setting up development environment we will
    
    **KIRA NETWORK MANAGER** enables you to restart your environment and pull latest changes from github, every time you make change to repositories you are working with you should select option `[R]` to re-build everything (If you only work with `sekai` that should take less then 3 minutes to complete!). If you ever need to update your default settings such as SSH key or notifications email address you can select option `[I]` and go through setup once again.
 
-   ![picture 1](https://i.imgur.com/iyuqqsz.png)
+   ![picture 1](https://i.imgur.com/PhUcjw2.png)  
+
 
    **KIRA CONTAINER MANAGER** allows you to inspect any running container, such as validator based of your `sekai` repository. You can also manage the container by stopping, starting, pausing or unpausing it. If something goes wrong and your validator fails all you have to do to find out what happened is click `[L]` and inspect logs in the pre-installed visual studio code editor. Longs will contain all information's necessary do debug. To refresh logs you have to run `[L]` option again, you can do it bot with container in running or failed state.
 
-   ![picture 3](https://i.imgur.com/LFKtIAm.png) 
+   ![picture 2](https://i.imgur.com/bBbD5Pk.png)  
 
    **KIRA GIT MANAGER** allows you to edit, push, pull, resolve conflicts, change branches and even merge all your code changes with other branches without having to leave your virtual machine. Clicking `[V]` option will open a visual studio code editor and allow you deep dive into the code in minutes.
 
