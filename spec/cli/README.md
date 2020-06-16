@@ -1,11 +1,17 @@
 
 # Command Line Interface
 
-The CLI is a main tool used in Kira for the purpose of the automation and testing. We should always aim to maintain it up to date with latest changes and ensure that default output is JSON formatted as well as all exceptions result in appropriate exit code's != 1.
+The CLI are a main tool used in Kira for the purpose of the automation and testing. If you want to interact with [sekai](/spec/glossary.md#sekai)  application you can use one of the two following CLI tools:
 
-`sekai` (Japanese for "world") is the name of the Cosmos SDK application for the Kira Hub. It should come with 2 main entry points:
+* [sekaid](./sekaid/README.md) - The Sekai Daemon
+   * Configure Nodes
+   * Run Sentry Nodes
+   * Run Full Nodes
+   * Run Validator Nodes
 
-* `sekaid`: The Sekai Daemon, runs a full-node of the sekai application.
-* `sekaicli`: The Sekai command-line interface, which enables interaction with a Sekai full-node.
+* [sekaicli](./sekaicli/README.md) - The Sekai Command-Line Interface
+   *  Create Accounts
+   *  Query Blockchain State
+   *  Submit Transactions
 
-
+> NOTE: To learn more about available commands click on one of the bullet points above or use `--help` flag

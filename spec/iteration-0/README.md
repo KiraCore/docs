@@ -63,10 +63,5 @@ The main goal of `Iteration 0` is to create a minimum viable DEX
 
 Various technical definitions relevant to `Iteration 0` can be found in [glossary](../glossary.md). In case any part of the documentation is not clear, or difficult to understand, please create a relevant github issue.
 
-
-
-
-
-
-
+We should always aim to maintain CLI up to date with latest changes and ensure that default output is JSON formatted as well as all exceptions result in appropriate exit code's != 0.
 
