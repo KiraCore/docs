@@ -9,7 +9,7 @@ The `keys add` command allows you to add new account where coins can be deposite
 > Command Example
 
 ```
-ACCOUNT_NAME="test-1g" && \
+ACCOUNT_NAME="test-x" && \
  KEYRING_PASSWORD="1234567890" && \
  sekaicli keys add $ACCOUNT_NAME << EOF
 $KEYRING_PASSWORD
@@ -20,7 +20,7 @@ EOF
 <details> 
     <summary>Output Example</summary>
     <pre>
-- name: test-1g
+- name: test-x
   type: local
   address: kira1agqjyfkmtg86qddpc7a7d2dchaxtxf7p42j5ls
   pubkey: kirapub1addwnpepq2pvgw2mg89gejysdlfh4tvxw76keq3qkfxsnmd8szrp79wvlctw6n7ke47
@@ -54,7 +54,7 @@ KEYRING_PASSWORD="1234567890" && \
   mnemonic: ""
   threshold: 0
   pubkeys: []
-- name: test-2
+- name: test-x
   type: local
   address: kira14fx5q9su3h2ptevmxv7y3lnmn07dfdkdlujdd9
   pubkey: kirapub1addwnpepq0dvc57parg4fjeacksq85yactfjnl7ya68vuuyq886xl095m6fpgv8hc79
