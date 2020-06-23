@@ -4,22 +4,18 @@ Management of the locally stored account keys
 
 ## Create Key
 
-The `keys add` command allows you to add new account where coins can be deposited. To execute this command you will have to specify account name and [keyring](https://web.archive.org/web/20200616113125/https://github.com/cosmos/cosmos-sdk/blob/2be38d0304d4c269671d6aefeeffbb7af127b234/docs/interfaces/keyring.md) password
+The `sekaicli keys add` command allows to add new account where coins can be deposited. To execute this command you will have to specify account name and [keyring](https://web.archive.org/web/20200616113125/https://github.com/cosmos/cosmos-sdk/blob/2be38d0304d4c269671d6aefeeffbb7af127b234/docs/interfaces/keyring.md) password
 
-> Command Example
-
-```
+<details> 
+    <summary>Command Example</summary>
+    <pre>
 ACCOUNT_NAME="test-x" && \
  KEYRING_PASSWORD="1234567890" && \
  sekaicli keys add $ACCOUNT_NAME << EOF
 $KEYRING_PASSWORD
 $KEYRING_PASSWORD
 EOF
-```
-
-<details> 
-    <summary>Output Example</summary>
-    <pre>
+</pre>Output Example<pre>
 - name: test-x
   type: local
   address: kira1agqjyfkmtg86qddpc7a7d2dchaxtxf7p42j5ls
@@ -32,21 +28,18 @@ EOF
 It is the only way to recover your account if you ever forget your password.
 
 pipe message gas space disorder scissors left hotel remind trash caution exit twenty virtual trash style pyramid spread awake silent spin combine expand spirit
-    </pre>
+</pre>
 </details>
 
 ## List Keys
 
-The `keys list` allows to list details of all account keys that you created
-> Command Example
-```
+The `sekaicli keys list` allows to list details of all account keys that you created
+<details> 
+    <summary>Command Example</summary>
+    <pre>
 KEYRING_PASSWORD="1234567890" && \
  echo "$KEYRING_PASSWORD" | sekaicli keys list
-```
-
-<details> 
-    <summary>Output Example</summary>
-    <pre>
+</pre>Output Example<pre>
 - name: test-1
   type: local
   address: kira1ufak8sc7g6w7pnlmalq9adqmj7cktcrk073ctz
@@ -67,30 +60,76 @@ KEYRING_PASSWORD="1234567890" && \
 
 ## Show Key
 
-The `keys show` allows to display public key of your account
+The `sekaicli keys show` allows to display public key of your account
 
-> Command Example
-```
-ACCOUNT_NAME="test-1" && \
+<details> 
+    <summary>Command Example</summary>
+    <pre>
+ACCOUNT_NAME="test-x" && \
  KEYRING_PASSWORD="1234567890" && \
  echo "$KEYRING_PASSWORD" | sekaicli keys show $ACCOUNT_NAME -a
-```
-<details> 
-    <summary>Output Example</summary>
-    <pre>kira1ufak8sc7g6w7pnlmalq9adqmj7cktcrk073ctz</pre>
+</pre>Output Example<pre>
+    kira1ufak8sc7g6w7pnlmalq9adqmj7cktcrk073ctz</pre>
 </details>
 
 ## Delete Key
 
-The `keys delete` removes existing account
+The `sekaicli keys delete` removes existing account
 
-> Command Example
-```
-ACCOUNT_NAME="test-1" && \
+<details> 
+    <summary>Command Example</summary>
+    <pre>
+ACCOUNT_NAME="test-x" && \
  KEYRING_PASSWORD="1234567890" && \
  echo "$KEYRING_PASSWORD" | sekaicli keys delete $ACCOUNT_NAME --yes
-```
-<details> 
-    <summary>Output Example</summary>
-    <pre>Key deleted forever (uh oh!)</pre>
+</pre>Output Example<pre>
+   Key deleted forever (uh oh!)</pre>
 </details>
+
+## Export Key
+
+The `sekaicli keys export` allows to export and encrypt key with custom password
+
+<details> 
+    <summary>Command Example</summary>
+    <pre>
+ACCOUNT_NAME="test-x" && \
+ KEYRING_PASSWORD="1234567890" && \
+ ENCRYPT_PASSWORD="1234567890" && \
+ OUTPUT_FILE=./your-file-name.key && \
+sekaicli keys export $ACCOUNT_NAME -o text > $OUTPUT_FILE 2>&1 << EOF
+$ENCRYPT_PASSWORD
+$KEYRING_PASSWORD
+EOF
+</pre>Output Example (cat $OUTPUT_FILE)<pre>
+-----BEGIN TENDERMINT PRIVATE KEY-----
+kdf: bcrypt
+salt: 46A10EAC224C0510B6095A13FC661F2E
+type: secp256k1
+
+lvyIiFCZBGw5uXUjI7Nt/qZ9I8fhMTSUsXJ9wRoZQoUDC/rf29ezLrZtliYqpjV7
+46bK4AsbE2Ek98e2/xN+Tt5Y/VAjVywKRtDqQpA=
+=bwi0
+-----END TENDERMINT PRIVATE KEY-----
+</pre>
+</details>
+
+## Import Key
+
+The `sekaicli keys import` allows to import and key encrypted key with password
+
+<details> 
+    <summary>Command Example</summary>
+    <pre>
+ACCOUNT_NAME="test-x" && \
+ KEYRING_PASSWORD="1234567890" && \
+ DECRYPT_PASSWORD="1234567890" && \
+ INPUT_FILE=./your-file-name.key && \
+sekaicli keys import $ACCOUNT_NAME $INPUT_FILE << EOF
+$DECRYPT_PASSWORD
+$KEYRING_PASSWORD
+$KEYRING_PASSWORD
+EOF
+</pre>
+</details>
+

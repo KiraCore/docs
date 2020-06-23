@@ -9,7 +9,10 @@ The Sekai Command-Line Interface allows you to communicate with full-nodes, exec
   * [List Keys](./keys.md#list-keys)
   * [Show Key](./keys.md#show-key)
   * [Delete Key](./keys.md#delete-key)
+  * [Export Key](./keys.md#export-key)
 * [Account Management](./accounts.md)
   * [Query Account](./accounts.md#query-account)
   * [Transfer Tokens](./accounts.md#transfer-tokens)
-* Order Book
+* [Order Book](./order-book.md)
+  * [Create Order Book](./order-book.md#create-order-book)
+  * [List Order Books](./order-book.md#list-order-books)
