@@ -1,5 +1,7 @@
 # [⏎](README.md) Bank Module
 
+Bank module enables transfers between accounts
+
 ## Query Balances
 
 The `/bank/balances/<address>` endpoint allows to query token balances of any kira `<account>` address
