@@ -31,7 +31,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
       * :x: :new_moon: [[:bookmark:KIP_8]](kip_8.md) Response Signing
       * :x: :new_moon: [[:bookmark:KIP_9]](kip_9.md) Endpoints Whitelist
   
-3. :eyes: **Web User Interface** (Static Page)
+3. :computer: **Web User Interface** (Static Page)
    * :zap: Account Management
       * :x: :full_moon: [:bookmark:KIP_10] Token Balances (Preview)
       * :x: :new_moon: [:bookmark:KIP_11] Token Transfers (Withdraw)

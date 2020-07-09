@@ -10,6 +10,8 @@ In this document you will find all references necessary to understand and execut
 
 * [Iteration-0](iteration-0/README.md)
     * Proof of Concept Blockchain Application
+* [Iteration-1](iteration-1/README.md)
+    * First Iteration Public Testnet (Pre MVP)
 
 ## Kira Core Design Specifications
 
