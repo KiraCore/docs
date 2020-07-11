@@ -33,19 +33,20 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
   
 3. :computer: **Web User Interface** (Static Page)
    * :zap: Account Management
-      * :x: :full_moon: [:bookmark:KIP_10] Token Balances (Preview)
-      * :x: :new_moon: [:bookmark:KIP_11] Token Transfers (Withdraw)
-      * :x: :new_moon: [:bookmark:KIP_12] Trusted Signatures (Whitelist)
+      * :x: :full_moon: [:bookmark:KIP_10] Network Setup & Login
+      * :x: :full_moon: [[:bookmark:KIP_11]](kip_11.md) Token Balances
+      * :x: :full_moon: [:bookmark:KIP_12] Token Transfers
+      * :x: :new_moon: [:bookmark:KIP_13] Trusted Signatures (Whitelist)
    * :x: Order Book Management
-      * :x: :full_moon: [:bookmark:KIP_13] Select & Preview Order Books
-      * :x: :full_moon: [:bookmark:KIP_14] Place & Cancel Orders
+      * :x: :full_moon: [:bookmark:KIP_14] Select & Preview Order Books
+      * :x: :full_moon: [:bookmark:KIP_15] Place & Cancel Orders
    * :zap: Orders Management
-      * :x: :new_moon: [:bookmark:KIP_15] List & Cancel Orders 
+      * :x: :new_moon: [:bookmark:KIP_16] List & Cancel Orders 
    * :zap: Network Management
-      * :x: :new_moon: [:bookmark:KIP_16] List Validator 
-      * :x: :new_moon: [:bookmark:KIP_17] List Registered Signer Keys 
+      * :x: :new_moon: [:bookmark:KIP_17] List Validator 
+      * :x: :new_moon: [:bookmark:KIP_18] List Registered Signer Keys 
    * :zap: Security
-      * :x: :new_moon: [:bookmark:KIP_18] Signer Key Verification
+      * :x: :new_moon: [:bookmark:KIP_19] Signer Key Verification
 
 ### Dependency Map
 
@@ -54,7 +55,8 @@ _This map defines order in which tasks must be executed to fulfill goals of the 
 * **KIP 14** ⬅ **KIP 3** ⬅ **KIP 2** ⬅ **KIP 1**
 * **KIP 13** ⬅ **KIP 5** ⬅ **KIP 1**
 * **KIP 12** ⬅ **KIP 8** ⬅ **KIP 4**
-
+* **KIP 11** ⬅ **KIP 10**
+ 
 ## Objective
 
 The main goal of `Iteration 0` is to create a minimum viable DEX 
