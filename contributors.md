@@ -6,8 +6,9 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
 
 
 * [Mateusz Grzelak](https://github.com/asmodat) - `asmodat`
-  * `infra`
+  * `infra` - Kira Manager
   * `docs`
+  * off-chain IDO backend
 * [Arjun Andra](https://github.com/arjunandra) - `arjunandra`
   * kiraHub/sekai Setup & Initialization - Formatting To PersistenceSDK File Structure, app.go, module.go, etc. 
   * KIP_1 - OrderBook Structuring, Message Definition, Keeper Functions, Handler Functions, CLI Entry Points
@@ -20,7 +21,7 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
   * `docs`
 * [sudheerdarla](https://github.com/sudheerdarla) - `Hark99`
   * Website & Logo Design
-
+* [rgrcoding](https://github.com/rgrcoding) - `rgrcoding`
 
 
 

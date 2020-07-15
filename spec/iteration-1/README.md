@@ -13,32 +13,32 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
 
 1. :link: **Blockchain Application**
    * :zap: Governance
-     * :x: :full_moon: [:bookmark:KIP_19] PoA Governance Set
-     * :x: :full_moon: [:bookmark:KIP_20] Claim Governance Seat
-     * :x: :full_moon: [:bookmark:KIP_21] Add/Remove Network Actor (Proposal)
-     * :x: :new_moon: [:bookmark:KIP_22] Amend Code of Conduct (Proposal)
-     * :x: :new_moon: [:bookmark:KIP_23] Add/Remove Token Alias (Proposal)
+     * :x: :full_moon: [:bookmark:KIP_20] PoA Governance Set
+     * :x: :full_moon: [:bookmark:KIP_21] Claim Governance Seat
+     * :x: :full_moon: [:bookmark:KIP_22] Add/Remove Network Actor (Proposal)
+     * :x: :new_moon: [:bookmark:KIP_23] Amend Code of Conduct (Proposal)
+     * :x: :new_moon: [:bookmark:KIP_24] Add/Remove Token Alias (Proposal)
    * :zap: Consensus
-     * :x: :full_moon: [:bookmark:KIP_24] PoA Validator Set
-     * :x: :full_moon: [:bookmark:KIP_25] Claim Validator Seat  
+     * :x: :full_moon: [:bookmark:KIP_25] PoA Validator Set
+     * :x: :full_moon: [:bookmark:KIP_26] Claim Validator Seat  
 2. :globe_with_meridians: **[REST Server / JSON RPC](../rpc/README.md)**
    * :zap: Queries 
-      * :x: :full_moon: [:bookmark:KIP_26] List Validator/s
-      * :x: :full_moon: [:bookmark:KIP_27] List Councilor/s
-      * :x: :full_moon: [:bookmark:KIP_28] List Proposal/s
-      * :x: :new_moon: [:bookmark:KIP_29] Show Code of Conduct
-      * :x: :new_moon: [:bookmark:KIP_30] List Token Alias/es
+      * :x: :full_moon: [:bookmark:KIP_27] List Validator/s
+      * :x: :full_moon: [:bookmark:KIP_28] List Councilor/s
+      * :x: :full_moon: [:bookmark:KIP_29] List Proposal/s
+      * :x: :new_moon: [:bookmark:KIP_30] Show Code of Conduct
+      * :x: :new_moon: [:bookmark:KIP_31] List Token Alias/es
    * :zap: Availability
-      * :x: :new_moon: [:bookmark:KIP_31] Trusted Address Book
+      * :x: :new_moon: [:bookmark:KIP_32] Trusted Address Book
 3. :computer: **Web User Interface**  
    * :zap: Network Management
-      * :x: :full_moon: [:bookmark:KIP_31] Preview Validator Set
-      * :x: :full_moon: [:bookmark:KIP_32] Preview Governance Set
-      * :x: :full_moon: [:bookmark:KIP_33] Preview Proposals
+      * :x: :full_moon: [:bookmark:KIP_33] Preview Validator Set
+      * :x: :full_moon: [:bookmark:KIP_34] Preview Governance Set
+      * :x: :full_moon: [:bookmark:KIP_35] Preview Proposals
    * :x: Asset Management
-      * :x: :new_moon: [:bookmark:KIP_34] Alias Token Name
+      * :x: :new_moon: [:bookmark:KIP_36] Alias Token Name
    * :zap: Network Management
-      * :x: :new_moon: [:bookmark:KIP_35] Rotate Addresses 
+      * :x: :new_moon: [:bookmark:KIP_37] Rotate Addresses 
 
 ### Dependency Map
 
