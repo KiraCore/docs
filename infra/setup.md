@@ -33,13 +33,13 @@ For the purpose of setting up development environment we will
 
 5. Go though installation setup of your working environment
 
-   This step (running for the first time) might take up to 90 minutes to install all dependencies, depending on your network connection. If you get disconnected or something goes wrong during the process you can return to step 4
-
-   > _NOTE: If you want to stay 100% safe, you should create a new gmail account to receive notifications from Kira's virtual environment_
+   This step (running for the first time) might take up to 90 minutes to install all dependencies, depending on your network connection. If you get disconnected or something goes wrong during the process you can return to step 4.
 
    i. (OPTIONAL) Define email where you want to receive build notifications
 
    ii. (OPTIONAL) [Enable SMTP](https://www.youtube.com/watch?v=D-NYmDWiFjU) and [less secure apps](https://web.archive.org/save/https://hotter.io/docs/email-accounts/secure-app-gmail/) in your gmail account, then provide your login and password as SMTP credentials
+   
+   > _NOTE: If you want to stay 100% safe, you should create a new gmail account to receive notifications from Kira's virtual environment_
 
    iii. (OPTIONAL) In your github go to [Account Settings](https://github.com/settings/profile) -> [SSH and PGP keys](https://github.com/settings/keys) -> [New SSH Key](`https://github.com/settings/ssh/new`) and add new ssh key using provided to you by the `KIRA-MANAGER` PUBLIC ssh key (or create new one and provide PRIVATE ssh key to the `KIRA-MANAGER`). If you do not provide SSH key or do not add new public ssh key to your github account you will not be able to access many useful features offered by the  **KIRA GIT MANAGER**
 
@@ -58,15 +58,16 @@ For the purpose of setting up development environment we will
 
 7. See what is going on with your new network !
    
-   **KIRA NETWORK MANAGER** enables you to restart your environment and pull latest changes from github, every time you make change to repositories you are working with you should select option `[R]` to re-build everything (If you only work with `sekai` that should take less then 3 minutes to complete!). If you ever need to update your default settings such as SSH key or notifications email address you can select option `[I]` and go through setup once again.
+   **KIRA NETWORK MANAGER** enables you to preview your infrastructure, restart your environment and pull latest changes from github. Every time you make change to repositories you should select option `[H]` to re-build and re-deploy everything (If you only work with `sekai` that should take less then 3 minutes to complete!). If you ever need to update your default settings such as SSH key or notifications email address you can select option `[I]` and go through initial setup once again (it will be much faster when you run it for the second time).
 
-   ![picture 1](https://i.imgur.com/PhUcjw2.png)  
-
+   ![picture 1](https%3A//i.imgur.com/be47e8I.png)  
 
    **KIRA CONTAINER MANAGER** allows you to inspect any running container, such as validator based of your `sekai` repository. You can also manage the container by stopping, starting, pausing or unpausing it. If something goes wrong and your validator fails all you have to do to find out what happened is click `[L]` and inspect logs in the pre-installed visual studio code editor. Longs will contain all information's necessary do debug. To refresh logs you have to run `[L]` option again, you can do it bot with container in running or failed state.
 
-   ![picture 2](https://i.imgur.com/bBbD5Pk.png)  
+   ![picture 3](https%3A//i.imgur.com/7Sce3sk.png)  
 
-   **KIRA GIT MANAGER** allows you to edit, push, pull, resolve conflicts, change branches and even merge all your code changes with other branches without having to leave your virtual machine. Clicking `[V]` option will open a visual studio code editor and allow you deep dive into the code in minutes.
 
-   ![picture 4](https://i.imgur.com/OKGDSMH.png)  
+   **KIRA GIT MANAGER** allows you to edit, push, pull, resolve conflicts, assign tags, change branches and even merge all your code changes with other branches without having to leave your virtual machine. Clicking `[V]` option will open a visual studio code editor and allow you deep dive into the code in minutes.
+
+   ![picture 4](https%3A//i.imgur.com/JZKxohN.png)  
+
