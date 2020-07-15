@@ -41,7 +41,33 @@ Output Example
 </pre>
 </details>
 
+## Create Order
 
+> Available Order Types
+* `0` - Limit Buy
+* `1` - Limit Sell
 
+### Limit Order
+
+The `sekaicli query kiraHub createOrder` command allows to create buy or sell limit order
+
+<details>
+<summary>Command Example</summary>
+<pre>
+ACCOUNT_NAME="test-1" && \
+ KEYRING_PASSWORD="1234567890" && \
+ ACCOUNT_ADDRESS=$(echo "$KEYRING_PASSWORD" | sekaicli keys show $ACCOUNT_NAME -a) && \
+ AMOUNT=1000 && \
+ ORDER_TYPE=0 && \
+ PRICE=9000 && \
+ FEES="15ukex" && \
+ ORDER_BOOKS=$(sekaicli query kiraHub listorderbooks Curator $ACCOUNT_ADDRESS --output json) && \
+ ORDER_BOOK_ID=$(echo $ORDER_BOOKS | jq -r '.[0].id') && \
+ sekaicli tx kiraHub createOrder $ORDER_BOOK_ID $ORDER_TYPE $AMOUNT $PRICE --fees=$FEES << EOF
+$KEYRING_PASSWORD
+$KEYRING_PASSWORD
+EOF[flags]
+</pre>
+</details>
 
 

@@ -28,26 +28,32 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
       * :x: :full_moon: [:bookmark:KIP_29] List Proposal/s
       * :x: :new_moon: [:bookmark:KIP_30] Show Code of Conduct
       * :x: :new_moon: [:bookmark:KIP_31] List Token Alias/es
+      * :x: :new_moon: [:bookmark:KIP_32] List Functions & Metadata
    * :zap: Availability
-      * :x: :new_moon: [:bookmark:KIP_32] Trusted Address Book
+      * :x: :new_moon: [:bookmark:KIP_33] Trusted Address Book
 3. :computer: **Web User Interface**  
    * :zap: Network Management
-      * :x: :full_moon: [:bookmark:KIP_33] Preview Validator Set
-      * :x: :full_moon: [:bookmark:KIP_34] Preview Governance Set
-      * :x: :full_moon: [:bookmark:KIP_35] Preview Proposals
-   * :x: Asset Management
-      * :x: :new_moon: [:bookmark:KIP_36] Alias Token Name
-   * :zap: Network Management
-      * :x: :new_moon: [:bookmark:KIP_37] Rotate Addresses 
+      * :x: :full_moon: [:bookmark:KIP_34] Preview Validator Set
+      * :x: :new_moon: [:bookmark:KIP_35] Claim Validator Seat
+      * :x: :new_moon: [:bookmark:KIP_36] Rotate RPC URLs 
+   * :zap: Governance
+      * :x: :full_moon: [:bookmark:KIP_37] Preview Governance Set
+      * :x: :full_moon: [:bookmark:KIP_38] Preview Proposals
+      * :x: :new_moon: [:bookmark:KIP_39] Preview Code of Conduct
+      * :x: :new_moon: [:bookmark:KIP_40] Claim Governance Seat
+      * :x: :new_moon: [:bookmark:KIP_41] Accept/Reject Proposal
+      * :x: :new_moon: [:bookmark:KIP_42] Create Proposal
+   * :zap: Asset Management
+      * :x: :new_moon: [:bookmark:KIP_43] Alias Token Name/s
 
 ### Dependency Map
 
 _This map defines order in which tasks must be executed to fulfill goals of the `Iteration 1`_
 
-* **KIP 25** ⬅ **KIP 24** ⬅ **KIP 21** ⬅ **KIP 20** ⬅ **KIP 19**
-* **KIP 31** ⬅ **KIP 26**
-* **KIP 32** ⬅ **KIP 27**
-* **KIP 33** ⬅ **KIP 28**
+* **KIP 26** ⬅ **KIP 25** ⬅ **KIP 22** ⬅ **KIP 21** ⬅ **KIP 20**
+* **KIP 34** ⬅ **KIP 27**
+* **KIP 37** ⬅ **KIP 28**
+* **KIP 38** ⬅ **KIP 29**
 
 ## Objective
 

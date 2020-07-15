@@ -16,3 +16,4 @@ The Sekai Command-Line Interface allows you to communicate with full-nodes, exec
 * [Order Book](./order-book.md)
   * [Create Order Book](./order-book.md#create-order-book)
   * [List Order Books](./order-book.md#list-order-books)
+  * [Create Order](./order-book.md#create-order)
