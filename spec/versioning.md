@@ -4,8 +4,8 @@ This document defines the way in which we work with branches and software versio
 
 Software versions are defined by branch names of tags following `vX.Y.Z` syntax.
 * `X` - a number defining major, tested and stable releases
-* `Y` - a number defining tested and table iterations
-* `Z` - a number defining tested and table improvement proposals (KIP's, CIP's, etc.)
+* `Y` - a number defining tested and stable iterations
+* `Z` - a number defining tested and stable improvement proposals (KIP's, CIP's, etc.)
 
 While `Z` is stakeable, the `Y` and `X` are not, this means that `Z` signifies a count of improvement proposals (features) within iteration `Y`.
 For example if `KIP_1`, `KIP_2`, `KIP_3` were implemented then `Z` should equal `3` for a branch name containing all those improvement proposals. 
