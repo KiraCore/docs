@@ -32,3 +32,7 @@ Validators when proposing and agreeing on the new block production should act as
 It should not be possible to propagate blocks which timestamp varies from the system time by configurable value by each full node. (Default 1 minute)
 
 _NOTE: tlsdate or similar NTP alternative is required to run on the host machines_
+
+_NOTE: Kira must NOT use blocktime concept in its logic known from the original modules of the cosmos sdk_
+
+
