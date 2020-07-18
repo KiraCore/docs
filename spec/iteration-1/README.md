@@ -13,18 +13,17 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
 
 1. :link: **Blockchain Application**
    * :zap: Governance
-     * :x: :full_moon: [:bookmark:KIP_20] PoA Governance Set
-     * :x: :full_moon: [:bookmark:KIP_21] Claim Governance Seat
+     * :x: :full_moon: [[:bookmark:KIP_20]](kip_20.md) Curated Governance Set
+     * :x: :full_moon: [[:bookmark:KIP_21]](kip_21.md) Claim Governance Seat
      * :x: :full_moon: [:bookmark:KIP_22] Add/Remove Network Actor (Proposal)
      * :x: :new_moon: [:bookmark:KIP_23] Amend Code of Conduct (Proposal)
      * :x: :new_moon: [:bookmark:KIP_24] Add/Remove Token Alias (Proposal)
    * :zap: Consensus
-     * :x: :full_moon: [:bookmark:KIP_25] PoA Validator Set
+     * :x: :full_moon: [:bookmark:KIP_25] Curated Validator Set
      * :x: :full_moon: [:bookmark:KIP_26] Claim Validator Seat  
 2. :globe_with_meridians: **[REST Server / JSON RPC](../rpc/README.md)**
    * :zap: Queries 
-      * :x: :full_moon: [:bookmark:KIP_27] List Validator/s
-      * :x: :full_moon: [:bookmark:KIP_28] List Councilor/s
+      * :x: :full_moon: [[:bookmark:KIP_27]](KIP_27.md) List Network Actor/s
       * :x: :full_moon: [:bookmark:KIP_29] List Proposal/s
       * :x: :new_moon: [:bookmark:KIP_30] Show Code of Conduct
       * :x: :new_moon: [:bookmark:KIP_31] List Token Alias/es
@@ -50,10 +49,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
 
 _This map defines order in which tasks must be executed to fulfill goals of the `Iteration 1`_
 
-* **KIP 26** ⬅ **KIP 25** ⬅ **KIP 22** ⬅ **KIP 21** ⬅ **KIP 20**
-* **KIP 34** ⬅ **KIP 27**
-* **KIP 37** ⬅ **KIP 28**
-* **KIP 38** ⬅ **KIP 29**
+**KIP 26** ⬅ **KIP 25** ⬅ **KIP 21** ⬅ **KIP 27** ⬅ **KIP 20**
 
 ## Objective
 
