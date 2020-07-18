@@ -29,17 +29,19 @@ Kira proposals, which can be created by governance actors, can be passed, reject
 
 ## Network Actors
 
-**NetworkActor** class describes permissions, vote types and roles that can be assumed or executed by the account. Information regarding network actors must be stored within on-chain registry.
+**NetworkActor** class describes permissions, vote types and roles that can be assumed or executed by the account. Information regarding network actors must be stored within on-chain registry. 
+
+_NOTE: Permissions blacklist should at all times have priority over the whitelist_
 
 ```
 {
     "address": <string>
     "roles": [ <uint>, ... ],
-    "status": <uint>,
-    "votes": [ <uint>, ... ],
+    "status": <byte>,
+    "votes": [ <byte>, ... ],
     "permissions: {
-        "blacklist": [ <uint>, ... ],
-        "whitelist": [ <uint>, ... ]
+        "blacklist": [ <uint16>, ... ],
+        "whitelist": [ <uint16>, ... ]
     },
     "skin": <uint64>
 }
@@ -67,8 +69,9 @@ An unsigned integer describing state of the network actor role. **Active** statu
 * `unclaimed` - 0x01
 * `active` - 0x02
 * `paused` - 0x03
-* `jailed` - 0x04
-* `removed` - 0x05
+* `inactive` - 0x04
+* `jailed` - 0x05
+* `removed` - 0x06
 
 _NOTE: Network actor can have only a single status type assigned_
 
@@ -92,7 +95,27 @@ Describes blacklist and whitelist of function identifiers that can be triggered 
 
 Distinction between whitelist and blacklist is necessary because certain roles that network actor can assume might have default functions that can be triggered by the network actor. For example `validator` might by default be able to execute "Claim Validator Seat" function and `councilor` might be able to execute "Claim Governance Seat" function.
 
-A **Permissions Registry** should be created (ideally configurable from genesis) which would contain information - which functions can by default be executed by which network roles.
+A **Permissions Registry** (ideally configurable in the genesis json) must be created and define which functions can by default be executed by which network `roles`. This is essential because without that functionality we would have to update hundreds of records in Network Actors registry every time we want to allow every role owner to have additional permissions.
+
+_NOTE: Permissions Registry should always have priority over individual permissions of the network actor, that means that if the account owner assumes role then blacklist property associated with the role will override his whitelist if some of the functions overlap_ 
+
+#### Example Structure
+```
+{
+    "councilor" : {
+        "whitelist": [ <uint16>, ... ],
+        "blacklist": [ <uint16>, ... ] 
+    },
+    "validator" : {
+        "whitelist": [ <uint16>, ... ],
+        "blacklist": [ <uint16>, ... ] 
+    },
+    "govleader" : {
+        "whitelist": [ <uint16>, ... ],
+        "blacklist": [ <uint16>, ... ] 
+    }
+}
+```
 
 ### Skin
 

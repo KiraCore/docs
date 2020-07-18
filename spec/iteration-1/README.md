@@ -15,33 +15,33 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
    * :zap: Governance
      * :x: :full_moon: [[:bookmark:KIP_20]](kip_20.md) Curated Governance Set
      * :x: :full_moon: [[:bookmark:KIP_21]](kip_21.md) Claim Governance Seat
-     * :x: :full_moon: [:bookmark:KIP_22] Add/Remove Network Actor (Proposal)
+     * :x: :full_moon: [[:bookmark:KIP_22]](kip_22.md) Upsert Network Actor (Proposal)
      * :x: :new_moon: [:bookmark:KIP_23] Amend Code of Conduct (Proposal)
-     * :x: :new_moon: [:bookmark:KIP_24] Add/Remove Token Alias (Proposal)
+     * :x: :new_moon: [:bookmark:KIP_24] Upsert Token Alias (Proposal)
    * :zap: Consensus
-     * :x: :full_moon: [:bookmark:KIP_25] Curated Validator Set
-     * :x: :full_moon: [:bookmark:KIP_26] Claim Validator Seat  
+     * :x: :full_moon: [[:bookmark:KIP_25]](kip_25.md) Curated Validator Set
+     * :x: :full_moon: [[:bookmark:KIP_26]](kip_26.md) Claim Validator Seat  
 2. :globe_with_meridians: **[REST Server / JSON RPC](../rpc/README.md)**
    * :zap: Queries 
-      * :x: :full_moon: [[:bookmark:KIP_27]](KIP_27.md) List Network Actor/s
-      * :x: :full_moon: [:bookmark:KIP_29] List Proposal/s
-      * :x: :new_moon: [:bookmark:KIP_30] Show Code of Conduct
-      * :x: :new_moon: [:bookmark:KIP_31] List Token Alias/es
-      * :x: :new_moon: [:bookmark:KIP_32] List Functions & Metadata
+      * :x: :full_moon: [[:bookmark:KIP_27]](KIP_27.md) List Network Actors & Permissions
+      * :x: :full_moon: [[:bookmark:KIP_28]](KIP_28.md) List Proposal/s
+      * :x: :new_moon: [:bookmark:KIP_29] Show Code of Conduct
+      * :x: :new_moon: [:bookmark:KIP_30] List Token Alias/es
+      * :x: :new_moon: [:bookmark:KIP_31] List Functions & Metadata
    * :zap: Availability
-      * :x: :new_moon: [:bookmark:KIP_33] Trusted Address Book
+      * :x: :new_moon: [:bookmark:KIP_32] Trusted Address Book
 3. :computer: **Web User Interface**  
    * :zap: Network Management
-      * :x: :full_moon: [:bookmark:KIP_34] Preview Validator Set
-      * :x: :new_moon: [:bookmark:KIP_35] Claim Validator Seat
-      * :x: :new_moon: [:bookmark:KIP_36] Rotate RPC URLs 
+      * :x: :full_moon: [:bookmark:KIP_33] Preview Validator Set
+      * :x: :new_moon: [:bookmark:KIP_34] Claim Validator Seat
+      * :x: :new_moon: [:bookmark:KIP_35] Rotate RPC URLs 
    * :zap: Governance
-      * :x: :full_moon: [:bookmark:KIP_37] Preview Governance Set
-      * :x: :full_moon: [:bookmark:KIP_38] Preview Proposals
-      * :x: :new_moon: [:bookmark:KIP_39] Preview Code of Conduct
-      * :x: :new_moon: [:bookmark:KIP_40] Claim Governance Seat
-      * :x: :new_moon: [:bookmark:KIP_41] Accept/Reject Proposal
-      * :x: :new_moon: [:bookmark:KIP_42] Create Proposal
+      * :x: :full_moon: [:bookmark:KIP_36] Preview Governance Set
+      * :x: :full_moon: [:bookmark:KIP_37] Preview Proposals
+      * :x: :new_moon: [:bookmark:KIP_38] Preview Code of Conduct
+      * :x: :new_moon: [:bookmark:KIP_39] Claim Governance Seat
+      * :x: :new_moon: [:bookmark:KIP_40] Accept/Reject Proposal
+      * :x: :new_moon: [:bookmark:KIP_41] Create Proposal
    * :zap: Asset Management
       * :x: :new_moon: [:bookmark:KIP_43] Alias Token Name/s
 
@@ -50,6 +50,8 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
 _This map defines order in which tasks must be executed to fulfill goals of the `Iteration 1`_
 
 **KIP 26** ⬅ **KIP 25** ⬅ **KIP 21** ⬅ **KIP 27** ⬅ **KIP 20**
+
+**KIP 28** ⬅ **KIP 23**
 
 ## Objective
 
