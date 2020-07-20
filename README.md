@@ -16,6 +16,7 @@ Kira documentation is a full guide enabling you to easily onboard, track our pro
   * [Setup](infra/setup.md) 
   * [Networking](infra/networking.md) 
 * [Contributors](contributors.md) - Self-curated List of Contributors and Their Input
+* [Comparisons](vs/README.md) - Comparisons of Kira With Other Protocols
 
 # Kira Protocol Licenses and Documentation
 
