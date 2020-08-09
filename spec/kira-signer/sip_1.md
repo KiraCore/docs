@@ -34,15 +34,17 @@ Data that must be signed must contain information such as algorithm or derivatio
 ```
 {
     "version": "v0.0.1",
+    "type": "cosmos",
     "algorithm": "secp256k1",
     "network-id": "kira-1",
     "path": "m/44/118/0/0/0",
+    "prefix": "kira",
     "data": "...",
     "page": <page-number>/<max-pages>,
 }
 ```
 
-The `version`, `algorithm`, `network-id` & `path` should only be specified in the first QR code page, further pages should only contain data and page.
+The `version`, `type`, `algorithm`, `network-id`, `prefix` & `path` should only be specified in the first QR code page, further pages should only contain data and page.
 
 _NOTE: It must be configurable in the mock to split data into variable number of pages._
 
