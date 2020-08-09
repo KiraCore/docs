@@ -1,5 +1,5 @@
 
-# Iteration 0
+# [⏎](../README.md) Iteration 0
 
 The `Iteration 0` or Proof of Concept (PoC) is a first evolutionary step of the Kira Protocol. The main goal of this iteration is to create minimum viable blockchain-application based service that end user can interact with. The subject of the PoC is a Decentralized Exchange (DEX), a blockchain application containing minimum set of instructions necessary to enable 2 or more users to trustlessly exchange their tokens.
 
@@ -20,7 +20,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
      * :pick: :full_moon: [[:bookmark:KIP_2]](kip_2.md) Place Order
      * :pick: :full_moon: [[:bookmark:KIP_3]](kip_3.md) Cancel Order
    * :zap: Key Management
-     * :x: :new_moon: [[:bookmark:KIP_4]](kip_4.md) Signer Key Registration
+     * :x: :new_moon: [[:bookmark:KIP_4]](kip_4.md) Upsert Signer Key
   
 2. :globe_with_meridians: **[REST Server / JSON RPC](../rpc/README.md)**
    * :zap: Queries 
@@ -33,9 +33,9 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
   
 3. :computer: **Web User Interface** (Static Page)
    * :zap: Account Management
-      * :x: :full_moon: [:bookmark:KIP_10] Network Setup & Login
+      * :x: :full_moon: [[:bookmark:KIP_10]](kip_10.md) Network Setup & Login
       * :x: :full_moon: [[:bookmark:KIP_11]](kip_11.md) Token Balances
-      * :x: :full_moon: [:bookmark:KIP_12] Token Transfers
+      * :x: :full_moon: [[:bookmark:KIP_12]](kip_12.md) Token Transfers
       * :x: :new_moon: [:bookmark:KIP_13] Trusted Signatures (Whitelist)
    * :x: Order Book Management
       * :x: :full_moon: [:bookmark:KIP_14] Select & Preview Order Books
@@ -54,8 +54,8 @@ _This map defines order in which tasks must be executed to fulfill goals of the 
 
 * **KIP 14** ⬅ **KIP 3** ⬅ **KIP 2** ⬅ **KIP 1**
 * **KIP 13** ⬅ **KIP 5** ⬅ **KIP 1**
-* **KIP 12** ⬅ **KIP 8** ⬅ **KIP 4**
-* **KIP 11** ⬅ **KIP 10**
+* **KIP 8** ⬅ **KIP 4**
+* **KIP 12** ⬅ **KIP 11** ⬅ **KIP 10**
  
 ## Objective
 

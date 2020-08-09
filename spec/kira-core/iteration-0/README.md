@@ -1,5 +1,5 @@
 
-# Iteration 0
+# [⏎](../../README.md) Iteration 0
 
 The `Iteration 0` is a first evolutionary step of the Kira Core organization setup. The main goal of this iteration is to provide minimum viable user experience for everyone landing on the Kira Core main website and documentation that will help anyone understand the organization structure as well as full Kira Protocol project scope.
 
@@ -15,7 +15,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
 
 1. :eyes: Web User Interface (Static Page)
    * :zap: Main Landing Website
-      * :x: :full_moon: [:bookmark:CIP_1](cip_1.md) Structure & Design
+      * :white_check_mark: :full_moon: [:bookmark:CIP_1](cip_1.md) Structure & Design
       * :x: :new_moon: [:bookmark:CIP_2](cip_2.md) Documentation
   
 ### Dependency Map

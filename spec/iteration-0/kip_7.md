@@ -17,9 +17,7 @@ Every response of the `query_signer_keys` command should be a JSON array contain
         "type": "ed25519",
         "expires": 1591387535,
         "enabled": True,
-        "owner": "kira00000000000000000000000000000000",
-        "permissions": [0,0,0,1,7,7,7],
-        "memo": "This is my hot account for trading small amounts on the  trading zone nr 1"
+        "permissions": [123,456,5678,...],
     }, { ... }, ...
 ]
 ```
