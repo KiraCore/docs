@@ -22,6 +22,7 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
 * [sudheerdarla](https://github.com/sudheerdarla) - `Hark99`
   * Website & Logo Design
 * [rgrcoding](https://github.com/rgrcoding) - `rgrcoding`
+* [wpickachu](https://github.com/wpickachu) - `Ryan Choi`
 
 
 

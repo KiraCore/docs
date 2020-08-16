@@ -35,7 +35,7 @@ Output Example
   "application_version": {
     "name": "sekai",
     "server_name": "sekaid",
-    "client_name": "sekaicli",
+    "client_name": "sekaid",
     "version": "1.0.0",
     "commit": "8e58f3998ed4d60a2e29f2cb774c0ffbb38c7c35",
     "build_tags": "",

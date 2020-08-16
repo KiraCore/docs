@@ -4,7 +4,7 @@ Management of the asset exchange module
 
 ## Create Order Book
 
-The `sekaicli tx kiraHub createOrderBook <BASE> <QUOTE> <MNEMONIC>` command allows to create a custom orderbook for any particular set of two assets.
+The `sekaid tx kiraHub createOrderBook <BASE> <QUOTE> <MNEMONIC>` command allows to create a custom orderbook for any particular set of two assets.
 
 <details>
 <summary>Command Example</summary>
@@ -15,7 +15,7 @@ FROM_ACCOUNT="test-1" && \
  BASE="uatom" && \
  QUOTE="ubtc" && \
  MNEMONIC="ATOM/BTC" && \
- expect -c "spawn sekaicli tx kiraHub createOrderBook $BASE $QUOTE "$MNEMONIC" --yes --fees=$FEES --from=$FROM_ACCOUNT --output json ; send \"$KEYRING_PASSWORD\r\" ; send \"$KEYRING_PASSWORD\r\"; interact"
+ expect -c "spawn sekaid tx kiraHub createOrderBook $BASE $QUOTE "$MNEMONIC" --yes --fees=$FEES --from=$FROM_ACCOUNT --output json ; send \"$KEYRING_PASSWORD\r\" ; send \"$KEYRING_PASSWORD\r\"; interact"
 </pre>
 Output Example
 <pre>
@@ -27,15 +27,15 @@ Output Example
 
 ### Query By Curator
 
-The `sekaicli query kiraHub listorderbooks Curator <ACCOUNT_ADDRESS>` command allows to query existing order books by the Curator address
+The `sekaid query kiraHub listorderbooks Curator <ACCOUNT_ADDRESS>` command allows to query existing order books by the Curator address
 
 <details>
 <summary>Command Example</summary>
 <pre>
 ACCOUNT_NAME="test-1" && \
  KEYRING_PASSWORD="1234567890" && \
- ACCOUNT_ADDRESS=$(echo "$KEYRING_PASSWORD" | sekaicli keys show $ACCOUNT_NAME -a) && \
- sekaicli query kiraHub listorderbooks Curator $ACCOUNT_ADDRESS --output json
+ ACCOUNT_ADDRESS=$(echo "$KEYRING_PASSWORD" | sekaid keys show $ACCOUNT_NAME -a) && \
+ sekaid query kiraHub listorderbooks Curator $ACCOUNT_ADDRESS --output json
 </pre>
 Output Example
 <pre>
@@ -51,21 +51,21 @@ Output Example
 
 ### Place Limit Order
 
-The `sekaicli query kiraHub createOrder <ORDER_BOOK_ID> <ORDER_TYPE> <AMOUNT> <PRICE>` command allows to create buy or sell limit order
+The `sekaid query kiraHub createOrder <ORDER_BOOK_ID> <ORDER_TYPE> <AMOUNT> <PRICE>` command allows to create buy or sell limit order
 
 <details>
 <summary>Command Example</summary>
 <pre>
 ACCOUNT_NAME="test-1" && \
  KEYRING_PASSWORD="1234567890" && \
- ACCOUNT_ADDRESS=$(echo "$KEYRING_PASSWORD" | sekaicli keys show $ACCOUNT_NAME -a) && \
+ ACCOUNT_ADDRESS=$(echo "$KEYRING_PASSWORD" | sekaid keys show $ACCOUNT_NAME -a) && \
  AMOUNT=1000 && \
  ORDER_TYPE=0 && \
  PRICE=9000 && \
  FEES="15ukex" && \
- ORDER_BOOKS=$(sekaicli query kiraHub listorderbooks Curator $ACCOUNT_ADDRESS --output json) && \
+ ORDER_BOOKS=$(sekaid query kiraHub listorderbooks Curator $ACCOUNT_ADDRESS --output json) && \
  ORDER_BOOK_ID=$(echo $ORDER_BOOKS | jq -r '.[0].id') && \
- expect -c "spawn sekaicli tx kiraHub createOrder $ORDER_BOOK_ID $ORDER_TYPE $AMOUNT $PRICE --from=$ACCOUNT_NAME --fees=$FEES --yes --output json ; send \"$KEYRING_PASSWORD\r\" ; send \"$KEYRING_PASSWORD\r\"; interact"
+ expect -c "spawn sekaid tx kiraHub createOrder $ORDER_BOOK_ID $ORDER_TYPE $AMOUNT $PRICE --from=$ACCOUNT_NAME --fees=$FEES --yes --output json ; send \"$KEYRING_PASSWORD\r\" ; send \"$KEYRING_PASSWORD\r\"; interact"
 </pre>
 Output Example
 <pre>

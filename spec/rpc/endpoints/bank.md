@@ -12,7 +12,7 @@ The `/bank/balances/<address>` endpoint allows to query token balances of any ki
 ACCOUNT_NAME="test-1" && \
  KEYRING_PASSWORD="1234567890" && \
  RPC_ADDRESS="localhost:10002" && \
- ACCOUNT_ADDRESS=$(echo "$KEYRING_PASSWORD" | sekaicli keys show $ACCOUNT_NAME -a) && \
+ ACCOUNT_ADDRESS=$(echo "$KEYRING_PASSWORD" | sekaid keys show $ACCOUNT_NAME -a) && \
  curl "$RPC_ADDRESS/bank/balances/$ACCOUNT_ADDRESS"
 </pre>
 Output Example

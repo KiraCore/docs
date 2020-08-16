@@ -55,7 +55,11 @@ _This map defines order in which tasks must be executed to fulfill goals of the 
 
 ## Objective
 
-The main goal of `Iteration 1` is to deploy a minimum viable public testnet
+The main goal of `Iteration 1` is to deploy a minimum viable public testnet with a validator and governance set permissioining.
+
+### Visualization 
+
+![picture 1](https://i.imgur.com/S89Vrbg.png)  
 
 ## Foreword
 
