@@ -1,18 +1,12 @@
 # Endpoints
 
-List of external and internal RPC endpoints that client applications can access.
+List of JSON-RPC endpoints that client applications can access.
 
-## External
+## GET
 
-External endpoints are available to clients that are authenticated (Private endpoints) or not authenticated (Public endpoints). External endpoints are available only in sentry mode and can be accessed by non-trusted client applications that are likely to cause full-node failure (e.g. UX).
+* [/node_info](status.md#node-info) - Query node info such as network and id
+* [/txs/{hash}](txs.md#GET) - Search transactions by hash
+* [/bank/balances/{address}](bank.md) - Query Account balances 
 
-* **GET** => [/node_info](status.md#node-info) - Query node info such as network and id
-* **GET** => [/txs/{hash}](txs.md#GET) - Search transactions by hash
-* **POST** => [/txs](txs.md#POST) - Broadcast transactions
-* **GET** => [/bank/balances/{address}](bank.md) - Query Account balances 
-
-## Internal
-
-Internal endpoints are available to clients that are authenticated (Private endpoints) or not authenticated (Public endpoints). External endpoints are available only in non-sentry mode and can be accessed only by trusted applications that are likely to cause full-node failure if abused (e.g. Monitoring Tools).
-
-
+## POST
+* [/txs](txs.md#POST) - Broadcast transactions

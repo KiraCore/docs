@@ -97,7 +97,7 @@ ACCOUNT_NAME="test-x" && \
  KEYRING_PASSWORD="1234567890" && \
  ENCRYPT_PASSWORD="1234567890" && \
  OUTPUT_FILE=./your-file-name.key && \
-sekaid keys export $ACCOUNT_NAME -o text > $OUTPUT_FILE 2>&1 << EOF
+sekaid keys export $ACCOUNT_NAME --output text > $OUTPUT_FILE 2>&1 << EOF
 $ENCRYPT_PASSWORD
 $KEYRING_PASSWORD
 EOF

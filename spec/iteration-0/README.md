@@ -28,7 +28,7 @@ _NOTE: All OPTIONAL :new_moon: features CAN become the scope of the future itera
       * :pick: :full_moon: [[:bookmark:KIP_6]](kip_6.md) List Orders
       * :x: :new_moon: [[:bookmark:KIP_7]](kip_7.md) List Signer Keys
    * :zap: Security
-      * :x: :new_moon: [[:bookmark:KIP_8]](kip_8.md) Response Signing
+      * :x: :new_moon: [[:bookmark:KIP_8]](kip_8.md) Response Signing & Proxy
       * :x: :new_moon: [[:bookmark:KIP_9]](kip_9.md) Endpoints Whitelist
   
 3. :computer: **Web User Interface** (Static Page)

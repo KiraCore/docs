@@ -23,10 +23,6 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
   * Website & Logo Design
 * [rgrcoding](https://github.com/rgrcoding) - `rgrcoding`
 * [wpickachu](https://github.com/wpickachu) - `Ryan Choi`
-
-
-
-
-
-
+* [codingkchain](https://github.com/codingkchain) - `codingkchain`
+* [Andre Marvin](https://github.com/fantasyup) - `fantasyup`
 

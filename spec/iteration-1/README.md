@@ -59,7 +59,7 @@ The main goal of `Iteration 1` is to deploy a minimum viable public testnet with
 
 ### Visualization 
 
-![picture 1](https://i.imgur.com/S89Vrbg.png)  
+![picture 2](https://i.imgur.com/28ONnVW.png)  
 
 ## Foreword
 
