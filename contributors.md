@@ -15,6 +15,10 @@ _NOTE: This list contains contributions to the kira protocol and allow us to bot
   * KIP_5 - Querier Structuring, Keeper Functions To Query, CLI Entry Points
 * [Chaitanya Agarwal](https://github.com/agarwalchaitanya) - `agarwalchaitanya`
 * [Siddarth Vijay](https://github.com/SiddarthVijay) - `SiddarthVijay`
+  * kiraHub/sekai Setup & Initialization - Basic setup tools and maintaining fork of cosmos sdk for kira customizaion 
+  * KIP_1 - Setting up ID creation and hash structures for easy querying and efficient storage
+  * KIP_2 - Handling orders, rudimentary ordermatching algorithm, managing liquidity and setting up query and tx CLI entry points
+  * KIP_6 - Querier Structuring, Keeper Functions To Query, CLI Entry Points
 * [Deepanshu Tripathi](https://github.com/deepanshutr) - `deepanshutr`
 * [Amanuel Yosief Mussie](https://github.com/AmanuelYosief) - `AmanuelYosief`
   * `website`
