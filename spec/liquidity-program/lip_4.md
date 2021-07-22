@@ -112,6 +112,20 @@ Withdraw and deposits can have following status codes:
 * `1` - Accepted
 * `2` - Rejected
 
+Token transfers freeze functionality should be implemented to enable transition to the new bank contracts in the future. 
+
+### Pegged Tokens Issuance
+
+Bank registrar `XARC-3` requires functionality that would allow it issuance of pegged assets. There exist at least three methods to enable that functionality:
+
+1. Embedding functionality to the `XARC-3` that would enable deployment of a modified [ERC-20](https://eips.ethereum.org/EIPS/eip-20), [ERC-721](https://eips.ethereum.org/EIPS/eip-721), ... & other smart contracts that can be fully managed by the `XARC-1` controller accounts.
+2. Embedding multi-token smartcontract standard such as [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155) then enable `XARC-1` controller accounts management over its functions.
+3. Deployment of a token contract, registration on the `XARC-3` and depositing 100% of its supply to the Bank Registrar from where the assets can be controlled by the `XARC-1` controller accounts.
+   
+_NOTE: It is expected that in Q4 2021 Metamask will fully support ERC-1155 making it a new NFT standard thus option 2 appears to be the cheapest, most lightweight solution._
+
+The simplest implementation by far is to deploy a fixed-supply contract with maximum possible supply and deposit 100% of all tokens into the `XARC-3` while giving `XARC-1` accounts full control over the assets. To achieve that a new `donate` function should be created that will deposit assets directly to the `XARC-3` but will not create a `deposit` index that `XARC-1` controllers would have to vote on to accept as assets would NOT be credited to any account on the destination chain.
+
 ### Example JSON Structure
 
 ```
@@ -121,6 +135,11 @@ Withdraw and deposits can have following status codes:
   "withdraw-fee": <integer>,    // minimum fee that must be paid to withdraw
   "proposer-reward": <decimal>, // reward for proposing withdraws/deposits
   "confirmations": <integer>,   // minimum number of confirmations required
+  "freeze": {
+    "deposits": <boolean>        // enable/disable deposits
+    "withdraws": <boolean>       // enable/disable withdraws
+    "donations": <boolean>       // enable/disable donations
+  },
   "balances": [
       {
         "address": "<address>",     // account address
@@ -150,13 +169,13 @@ Withdraw and deposits can have following status codes:
 
 _Example: setActivate()_
 
-* `setChange` - Defines cross-chain registrar address, fees and proposer rewards. If any of the values is not set then it should remain unmodified. All values should be optional. This function can only be used by the owner when the contract is NOT active.
+* `setChange` - Defines cross-chain registrar address, fees, proposer rewards and token transfers freeze properties. If any of the values is not set then it should remain unmodified. All values should be optional. This function can only be used by the owner when the contract is NOT active.
 
 _Example: setAccounts(registrar: "0xXARC2..ADDR", deposit_fee: 0, withdraw_fee: 123456, proposer_reward: 0.1)_
 
-* `proposeChange` - Proposal to change registrar, deposit/withdraw fees, fees and proposer rewards. Proposal passes and changes are applied only if `approveProposal` tx was submitted by no less then `XARC-1 treshold` number of accounts. If proposal passes then changes are applied and all proposals older then the one that passed should be cancelled/rejected.
+* `proposeChange` - Proposal to change registrar, deposit/withdraw fees, fees, proposer rewards and change token freeze properties. Proposal passes and changes are applied only if `approveProposal` tx was submitted by no less then `XARC-1 treshold` number of accounts. If proposal passes then changes are applied and all proposals older then the one that passed should be cancelled/rejected.
 
-_Example: proposeChange(registrar: "0xXARC2..ADDR", deposit_fee: 999, withdraw_fee: 321, proposer_reward: 0.1)_
+_Example: proposeChange(registrar: "0xXARC2..ADDR", deposit_fee: 999, withdraw_fee: 321, proposer_reward: 0.1, freeze_withdraws: true, freeze_deposits: false, freeze_donations: false)_
 
 * `proposeDeposits` - Proposal to accept and/or reject deposits. Can only be raised for assets deposited at `current_block_heigh - confirmations`. If passed records are cleared to save space. This proposal can be raised by any account as per `XARC-1`, proposer receives `proposer-reward %` of all deposit fees. Remaining fees are split between all who vote on accepting proposal. Proposal must have at least one record present and all deposit proposals older then the accepted one become automatically rejected.
 
@@ -170,14 +189,22 @@ _Example: processDeposits(accept: [1,2,4,5], reject: [3,6])_
 
 _Example: approveProposal(123)_
 
-* `deposit` - Deposit transaction can be made by anu user and requires a minimum `deposit-fee` to be included. 
+* `deposit` - Deposit transaction can be made by anu user and requires a minimum `deposit-fee` to be included. Deposits should only be possible if `deposits-freeze` flag is det to false.
 
-_Example: deposit(amount: 1000, token: <contract>, fee: 1234)_
+_Example: deposit(amount: 1000, token: "0xCONTRACT...ADDR", fee: 1234)_
 
-* `withdraw` - Withdraw transaction can be made by any user and requires a minimum `withdraw-fee` to be included. 
+* `withdraw` - Withdraw transaction can be made by any user and requires a minimum `withdraw-fee` to be included. Withdraws should only be possible if `withdraws-freeze` flag is det to false.
 
-_Example: withdraw(amount: 1000, token: <contract>, fee: 1234)_
+_Example: withdraw(amount: 1000, token: "0xCONTRACT...ADDR", fee: 1234)_
 
 * `claim` - Claim transaction can be executed after `withdraw` status is changed to `accepted`.
 
+_Example: claim()_
+
 * `refund` - Refund transaction can be executed after `deposit` status changes to `rejected` or if transaction is not present in any of the active deposit proposals. If refund is called funds should be returned to the user.
+
+_Example: refund()_
+
+* `donate` - Transfers assets to the contract without need for accepting deposit. No tokens would be issued on the destination chain in such case. This action can **NOT** be refunded. There should be no deposit fees in case of token donations. Donations should only be possible if `donations-freeze` flag is det to false.
+
+_Example: donate(amount: 1000, token: "0xCONTRACT...ADDR")_
